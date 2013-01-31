@@ -1,5 +1,6 @@
-
+#
 # 随机排列字符串
+#
 
 class String
   def shuffle
