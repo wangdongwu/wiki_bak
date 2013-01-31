@@ -1,3 +1,6 @@
+
+# 一种好的初始化方式
+
 class User
   attr_accessor :name, :email
 
