@@ -1,1 +1,2 @@
-##学习Ruby时的一些笔记
+学习Ruby的一些笔记
+详情见[wiki](https://github.com/NaixSpirit/notes/wiki)
