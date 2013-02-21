@@ -1,3 +1,6 @@
+这是一种ruby中的 `initialize` 方式。
+
+用这种 `attributes = {}` 的方式可以更好的建立对象的属性。
 ```ruby
 class User
   attr_accessor :name, :email
