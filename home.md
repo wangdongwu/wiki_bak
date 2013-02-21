@@ -3,7 +3,8 @@
 [[查找Module中的方法并输出|find-methods-in-module-and-output]]  
 [[随机排列字符串|shuffle-in-string]]  
 [[Ruby中的to_proc|to-proc-in-ruby]]  
-[[数组的默认元素|the-default-element-in-array]]
+[[数组的默认元素|the-default-element-in-array]]  
+[[数组的zip方法|zip-method]]  
 
 -
 
