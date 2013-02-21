@@ -4,6 +4,7 @@
 [[随机排列字符串|shuffle-in-string]]  
 [[Ruby中的to_proc|to-proc-in-ruby]]  
 
+< \br>
 
 **Rails技巧**
 > [[validates|validates-in-rails]]  
