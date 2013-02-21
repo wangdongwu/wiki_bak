@@ -4,12 +4,13 @@
 [[随机排列字符串|shuffle-in-string]]  
 [[Ruby中的to_proc|to-proc-in-ruby]]  
 
-< \br>
+-
 
 **Rails技巧**
 > [[validates|validates-in-rails]]  
 [[annotate|annotate]]  
- 
+
+-
 
 **Ruby元编程相关**
 > [[对象模型|object-in-metaprogramming-ruby]]  
@@ -17,7 +18,7 @@
 [[eval和define_method|eval-and-define-method]]  
 [[内核方法伪造关键字|using-keyword-in-ruby]]
 
-
+-
 
 **Ruby设计模式**
 > [[Ruby中的命令模式|command-mode-in-ruby]]
