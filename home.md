@@ -1,2 +1,2 @@
 ##this is NaixSpirit's personal wiki
-[[a-initialize-method-in-ruby]]
+- [[Ruby中的一种初始化方式|a-initialize-method-in-ruby]]
