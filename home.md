@@ -17,7 +17,7 @@
 > [[对象模型|object-in-metaprogramming-ruby]]  
 [[动态方法和动态派发|method-in-metaprogramming-ruby]]  
 [[eval和define_method|eval-and-define-method]]  
-[[内核方法伪造关键字|using-keyword-in-ruby]]
+[[用内核方法伪造关键字|using-keyword-in-ruby]]
 
 -
 
