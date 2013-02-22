@@ -5,6 +5,7 @@
 [[Ruby中的to_proc|to-proc-in-ruby]]  
 [[数组的默认元素|the-default-element-in-array]]  
 [[数组的zip方法|zip-method]]  
+[[Hash的默认元素|the-default-element-in-hash]]  
 
 -
 
