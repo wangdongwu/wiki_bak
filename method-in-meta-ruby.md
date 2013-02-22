@@ -1,6 +1,7 @@
 **动态方法** 和 **动态派发**
 
-这里注意 `send()` 方法，`send()` 方法的第一个参数是你要发送给对象的消息，也就是方法的名字，所有剩下的参数（以及代码快）会直接传递给调用的方法。
+这里注意 `send()` 方法:  
+**`send()` 方法的第一个参数是你要发送给对象的消息，也就是方法的名字，所有剩下的参数（以及代码快）会直接传递给调用的方法。**
 
 通过 `send()` 方法，你想调用的方法名可以成为一个参数，这样就可以在代码运行期间，直到最后一刻才决定调用哪个方法。这种技术称为 **动态派发(Dynamic Dispatch)** 。
 
@@ -8,6 +9,7 @@
 
 ```ruby
 class Computer
+
   def initialize(computer_id, data_source)
     @id = computer_id
     @data_source = data_source
@@ -17,6 +19,7 @@ class Computer
   end
 
   def self.define_componment(name)
+  
     define_method(name) do
       info = @data_source.send "get_#{name}_info", @id
       price = @data_source.send "get_#{name}_price", @id
@@ -36,6 +39,7 @@ end
 
 ```ruby
 class Computer
+
   instance_methods.each do |m|
     undef_method m unless m.to_s =~ /^__|method_missing|respond_to?|/
   end
