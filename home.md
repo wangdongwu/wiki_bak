@@ -6,6 +6,7 @@
 [[数组的默认元素|the-default-element-in-array]]  
 [[数组的zip方法|zip-method]]  
 [[Hash的默认元素|the-default-element-in-hash]]  
+[[Enumerable模块|enmuerable]]  
 
 -
 
