@@ -7,6 +7,8 @@
 [[数组的zip方法|zip-method]]  
 [[Hash的默认元素|the-default-element-in-hash]]  
 [[Enumerable模块|enmuerable]]  
+[[Blocks, Procs and Lambdas|blocks-procs-and-lambdas]]  
+
 
 -
 
