@@ -3,8 +3,9 @@
 **[Rake](http://rake.rubyforge.org/)** 的意思是Ruby Make，一个用Ruby开发的代码构建工具。也是一个任务管理工具，通过Rake可以获得两个好处：  
 
 > 1. 以任务的方式创建和运行脚本。  
-2. 追踪和管理任务之间的依赖。  
+2. 追踪和管理任务之间的依赖。 
 
+这里有详细的介绍--[rake | Github](https://github.com/jimweirich/rake)
 
 ###Rake脚本编写
 
@@ -42,6 +43,7 @@ desc是Rake定义的方法，表示对下面定义任务的描述。这个描述
 => rake task02  # the task02
 => rake task03  # the task03
 ```
+
 加入依赖关系:  
 ```ruby
 desc "the task01"
@@ -66,3 +68,16 @@ end
 => "this is task03"
 ```
 
+加入命名空间:
+```ruby
+namespace :tasks do
+  desc "the task01"
+  task :task01 do
+    puts "this is task01".inspect
+  end
+end
+```
+```sh
+>> rake tasks:task01
+=> "this is task01"
+```
