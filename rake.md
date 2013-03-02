@@ -13,17 +13,17 @@
 ```ruby
 desc "the task01"
 task :task01 do
-  puts "this is task01"
+  puts "this is task01".inspect
 end
 
 desc "the task02"
 task :task02 do
-  puts "this is task02"
+  puts "this is task02".inspect
 end
 
 desc "the task03"
 task :task03 do
-  puts "this is task03"
+  puts "this is task03".inspect
 end
 ```
 打开命令行工具，进入文件所在的目录，运行以下命令:
@@ -34,4 +34,8 @@ end
 => "this is task02"
 >> rake task03
 => "this is task03"
+```
+desc是Rake定义的方法，表示对下面定义任务的描述。这个描述会在使用Rake --tasks（或者Rake -T）命令时输出在屏幕上:
+```sh
+
 ```
