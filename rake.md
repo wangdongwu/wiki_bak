@@ -35,7 +35,10 @@ end
 >> rake task03
 => "this is task03"
 ```
-desc是Rake定义的方法，表示对下面定义任务的描述。这个描述会在使用Rake --tasks（或者Rake -T）命令时输出在屏幕上:
+desc是Rake定义的方法，表示对下面定义任务的描述。这个描述会在使用 **rake --tasks(或者rake -T)** 命令时输出在屏幕上:
 ```sh
-
+>> rake --tasks 
+=> rake task01  # the task01
+=> rake task02  # the task02
+=> rake task03  # the task03
 ```
