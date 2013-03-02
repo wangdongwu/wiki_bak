@@ -18,6 +18,11 @@
 
 -
 
+**Gems**
+> [[Rake|rake]]  
+
+-
+
 **元编程**
 > [[对象模型|object-in-meta-ruby]]  
 [[动态方法和动态派发|method-in-meta-ruby]]  
