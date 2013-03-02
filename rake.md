@@ -42,3 +42,27 @@ desc是Rake定义的方法，表示对下面定义任务的描述。这个描述
 => rake task02  # the task02
 => rake task03  # the task03
 ```
+加入依赖关系:  
+```ruby
+desc "the task01"
+task :task01 do
+  puts "this is task01".inspect
+end
+
+desc "the task02"
+task :task02 => :task01 do
+  puts "this is task02".inspect
+end
+
+desc "the task03"
+task :task03 => :task02 do
+  puts "this is task03".inspect
+end
+```
+```sh
+>> rake task03
+=> "this is task01"
+=> "this is task02"
+=> "this is task03"
+```
+
