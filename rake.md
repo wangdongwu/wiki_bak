@@ -5,7 +5,7 @@
 > 1. 以任务的方式创建和运行脚本。  
 2. 追踪和管理任务之间的依赖。 
 
-这里有详细的介绍--[rake | Github](https://github.com/jimweirich/rake)
+这里有详细的介绍--[Rake | Github](https://github.com/jimweirich/rake)
 
 ###Rake脚本编写
 
