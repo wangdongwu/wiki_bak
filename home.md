@@ -25,12 +25,14 @@
 -
 
 **元编程**
-> [[对象模型|object-in-meta-ruby]]  
+> [[类体系|class-in-ruby]]  
+[[对象模型|object-in-meta-ruby]]  
 [[动态方法和动态派发|method-in-meta-ruby]]  
 [[eval和define_method|eval-and-define-method]]  
 [[用内核方法伪造关键字|using-keyword-in-ruby]]  
 [[环绕别名|alias]]  
-[[钩子方法|hook-method]]
+[[钩子方法|hook-method]]  
+
 
 -
 
