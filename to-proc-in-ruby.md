@@ -20,7 +20,7 @@ end
 to_proc允许给一段需要传递给代码块的逻辑起一个名字，这样写在代码块中的逻辑就可以定义在其他地方，代码块中只需传入&逻辑名字的参数了。注意以下的链式调用：
 
 ```sh
->> projects.collect {&:name}
+>> projects.collect(&:name)
 => ["Write another ASCIIcast", "Go out walking"]
 >> projects.collect(&:name).collect(&:upcase)
 => ["WRITE ANOTHER ASCIICAST", "GO OUT WALKING"]
