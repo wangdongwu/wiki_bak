@@ -59,7 +59,7 @@
 -
 
 **AdMaster**
-> [[Ruby开发环境搭建]]  
+> [[Ruby开发环境搭建|ruby-environment]]  
 
 
 
