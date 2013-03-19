@@ -14,7 +14,7 @@ $ sudo apt-get install curl git-core
 $ sudo curl -L get.rvm.io | bash -s stable
 $ sudo apt-get install git-flow
 ```
-4. 添加github的[SSH keys](https://github.com/settings/ssh)。
+4. 添加github的 [SSH keys](https://github.com/settings/ssh)。
 5. 安装Ruby，替换为ruby淘宝源
 ```sh
 $ rvm requirements
@@ -24,5 +24,15 @@ $ rvm --default use 1.9.3
 $ gem source -r https://rubygems.org/
 $ gem source -a http://ruby.taobao.org
 $ gem update --system
+```  
+6. 安装 [Vim]()，[Sublime Text2]()
+```sh
+$ sudo apt-get install vim
+$ sodu add-apt-repository ppa:webupd8team/sublime-text-2
+$ sudo apt-get update
+$ sudo apt-get install sublime-text
 ```
-6. 下载[Koans](http://rubykoans.com/)。  
+7. 下载 [Koans](http://rubykoans.com/)。  
+Koans记录见[[]]
+
+
