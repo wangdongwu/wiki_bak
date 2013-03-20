@@ -23,7 +23,7 @@ $ sudo apt-get install git-flow
 
 4. 添加github的 [SSH keys](https://github.com/settings/ssh)。
 
-5. 安装Ruby，替换为ruby淘宝源。  
+5. 安装Ruby，替换为[ruby淘宝源](http://ruby.taobao.org/)。  
 ```sh
 $ rvm requirements
 $ sed -i 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g' ~/.rvm/config/db
@@ -43,11 +43,12 @@ $ sudo apt-get install sublime-text
 ```
 
 7. 下载 [Koans](http://rubykoans.com/)。  
-Koans学习记录见[[相关文档|ruby-koans]]。
+Koans学习记录见[[Ruby Koans 学习记录|ruby-koans]]。
 
-8. 下载 [underscore.js](http://underscorejs.org/)。阅读代码，一头雾水，各种不懂，balabalabala。
+8. 下载 [underscore.js](http://underscorejs.org/)。阅读代码，一头雾水，各种不懂，balabalabala。  
+Underscore学习记录见[[Underscore 学习记录|underscore]]
 
-9. 学习git，[Pro Git 简体中文版](http://iissnan.com/progit/)
-
+9. 学习git，[Pro Git 简体中文版](http://iissnan.com/progit/)。  
+git学习记录见[[git 学习记录|git]]
 
 
