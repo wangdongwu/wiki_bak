@@ -2,10 +2,8 @@
 
 -
 
-**Rails**
-> [[validates|validates-in-rails]]  
-[[annotate|annotate]]  
-
+**[[Rails|rails-list]]**
+ 
 -
 
 **Gems**
