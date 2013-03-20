@@ -37,6 +37,6 @@ $ sudo apt-get install sublime-text
 ```
 
 7. 下载 [Koans](http://rubykoans.com/)。  
-Koans记录见[[]]
+Koans记录见相关文档。
 
 
