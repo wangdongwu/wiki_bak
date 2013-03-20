@@ -1,4 +1,4 @@
-**Ruby**
+**[[Ruby|ruby-list]]**
 > [[Ruby中的一种初始化方式|a-initialize-method-in-ruby]]  
 [[查找Module中的方法并输出|find-methods-in-module-and-output]]  
 [[随机排列字符串|shuffle-in-string]]  
