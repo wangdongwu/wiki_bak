@@ -1,6 +1,11 @@
 ##开发环境配置总结
 
 1. 原机器已经安装好Ubuntu12.04，添加新用户，添加163的源。
+```sh
+$ sudo cp /etc/apt/sources.list /etc/apt/sources.list_backup
+$ sudo gedit /etc/apt/sources.list
+```
+
 2. 更新系统，重启。  
 ```sh
 $ sudo apt-get update
@@ -17,6 +22,7 @@ $ sudo apt-get install git-flow
 ```
 
 4. 添加github的 [SSH keys](https://github.com/settings/ssh)。
+
 5. 安装Ruby，替换为ruby淘宝源。  
 ```sh
 $ rvm requirements
@@ -37,6 +43,11 @@ $ sudo apt-get install sublime-text
 ```
 
 7. 下载 [Koans](http://rubykoans.com/)。  
-Koans记录见相关文档。
+Koans学习记录见[[相关文档|ruby-koans]]。
+
+8. 下载 [underscore.js](http://underscorejs.org/)。阅读代码，一头雾水，各种不懂，balabalabala。
+
+9. 学习git，[Pro Git 简体中文版](http://iissnan.com/progit/)
+
 
 
