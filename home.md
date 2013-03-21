@@ -2,6 +2,8 @@
 
 **[[Rails|rails-list]]**
 
+**[[JavaScript|javascript]]**
+
 **[[Gems|gems-list]]**
 
 **[[Tools|tools-list]]**
