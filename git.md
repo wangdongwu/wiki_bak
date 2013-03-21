@@ -74,6 +74,9 @@ git mv file_from file_to
 **查看提交历史**
 ```sh
 git log
+查看每次提交内容的差异
+git log -p
+git log -p -2
 ```
 
 **修改最后一次提交**
