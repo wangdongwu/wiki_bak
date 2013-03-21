@@ -15,7 +15,7 @@ git init
 **初始化裸仓库**
 > 
 ```sh
-git init -bare
+git init --bare
 ```
 
 **纳入版本控制**  
