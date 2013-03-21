@@ -8,7 +8,7 @@ git config core.editor subl
 **初始化**
 ```sh
 git init
-git init --bare **初始化裸仓库** 
+git init --bare 初始化裸仓库
 ```
 
 **纳入版本控制**
@@ -28,7 +28,7 @@ git status
 
 **忽略某些文件**
 ```sh
-建立名为 **.gitignore** 的文件
+建立名为 .gitignore 的文件
 ```
 
 **查看未暂存的更新**
@@ -47,7 +47,7 @@ git commit -m "xxx"
 ```sh
 git rm filename
 git rm -f filename  强制删除
-git rm --cached filename  **移除跟踪但不删除文件**
+git rm --cached filename  移除跟踪但不删除文件
 ```
 
 **移动文件**
@@ -86,7 +86,7 @@ git remote add [shortname] [url]
 ```
 git fetch [remote-name]
 ```
-> 此命令会到远程仓库中拉取所有你本地仓库中还没有的数据。运行完成后，你就可以在本地访问该远程仓库中的所有分支，将其中某个分支合并到本地，或者只是取出某个分支，一探究竟。 
+> 此命令会到远程仓库中拉取所有你本地仓库中还没有的数据。运行完成后，你就可以在本地访问该远程仓库中的所有分支，将其中某个分支合并到本地，或者只是取出某个分支，一探究竟。
 fetch命令只是将远端的数据拉倒本地仓库，并不自动合并到当前工作分支，只有当你确实准备好了，才能手工合并。
 
 **推送数据到远程仓库**
