@@ -1,5 +1,6 @@
 **用户配置**  
-> ```sh
+> 
+```sh
 git config user.name "username" 
 git config user.email xxx@xxx.com.cn
 git config core.editor subl
