@@ -3,8 +3,7 @@
 git config user.name "username" 
 git config user.email xxx@xxx.com.cn
 git config core.editor subl
-```
-
+```  
 
 **初始化**  
 > ```sh
