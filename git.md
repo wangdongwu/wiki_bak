@@ -7,144 +7,144 @@ git config core.editor subl
 ```  
 
 **初始化**  
-> ```sh
+> 
+```sh
 git init
 ```
 
-
 **纳入版本控制**  
-> ```sh
+> 
+```sh
 git add filename
 ```
 
-
 **从现有仓库克隆**  
-> ```sh
+> 
+```sh
 git clone [url] [yourdirname]
 ```
 
-
 **检查当前文件状态**  
-> ```sh
+> 
+```sh
 git status
 ```
 
-
 **忽略某些文件** 
-> ```sh
+> 
+```sh
 建立名为 **.gitignore** 的文件
 ```
 
-
 **查看未暂存的更新**  
-> ```sh
+> 
+```sh
 git diff
 ```
 
-
 **查看已暂存的更新**  
-> ```sh
+> 
+```sh
 git diff --cached
 ```
 
-
 **提交更新**  
-> ```sh
+> 
+```sh
 git commit
 git commit -m "xxx"
 ```
 
-
 **移除文件**  
-> ```sh
+> 
+```sh
 git rm filename
 ```
 
-
 **强制删除**  
-> ```sh
+> 
+```sh
 git rm -f filename
 ```
 
-
 **移除跟踪但不删除文件**  
-> ```sh
+> 
+```sh
 git rm --cached filename
 ```
 
-
 **移动文件**
-> ```sh
+> 
+```sh
 git mv file_from file_to
 ```
 
-
 **查看提交历史**  
-> ```sh
+> 
+```sh
 git log
 ```
 
-
 **修改最后一次提交**  
-> ```sh
+> 
+```sh
 git commit --amend
 ```
 
-
 **取消已经暂存的文件**  
-> ```sh
+> 
+```sh
 git reset HEAD filename
 ```
 
-
 **取消对文件的修改**  
-> ```sh
+> 
+```sh
 git checkout --filename
 ```
 
-
 **查看远程仓库及其对应的地址**  
-> ```sh
+> 
+```sh
 git remote  
 git remote -v
 ```
 
-
 **添加远程仓库**  
-> ```sh
+> 
+```sh
 git remote add [shortname] [url]
 ```
 
-
 **从远程仓库抓取数据**  
-> ```
+> 
+```
 git fetch [remote-name]
 ```
   > 此命令会到远程仓库中拉取所有你本地仓库中还没有的数据。运行完成后，你就可以在本地访问该远程仓库中的所有分支，将其中某个分支合并到本地，或者只是取出某个分支，一探究竟。  
   > fetch命令只是将远端的数据拉倒本地仓库，并不自动合并到当前工作分支，只有当你确实准备好了，才能手工合并。
 
-
-
 **推送数据到远程仓库**  
-> ```sh
+> 
+```sh
 git push [remote-name] [branch-name]
 ```
 
-
 **查看远程仓库信息**  
-> ```sh
+> 
+```sh
 git remote show [remote-name]
 ```
 
-
 **远程仓库的删除和重命名**  
-> ```sh
+> 
+```sh
 git remote rename pb paul
 git remote rm paul
 ```
 
-
 **打标签**  
-> ```sh
+> 
+```sh
 git tag
 ```
