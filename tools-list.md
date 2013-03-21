@@ -2,3 +2,4 @@
 [[Sublime|Sublime]]  
 [[Emacs|Emacs]]  
 [[Git|git]]  
+[[git裸仓库|git-init-bare]]  
