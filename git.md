@@ -8,11 +8,7 @@ git config core.editor subl
 **初始化**
 ```sh
 git init
-```
-
-**初始化裸仓库**
-```sh
-git init --bare
+git init --bare **初始化裸仓库** 
 ```
 
 **纳入版本控制**
@@ -38,11 +34,7 @@ git status
 **查看未暂存的更新**
 ```sh
 git diff
-```
-
-**查看已暂存的更新**
-```sh
-git diff --cached
+git diff --cached 查看已暂存的更新
 ```
 
 **提交更新**
@@ -54,16 +46,8 @@ git commit -m "xxx"
 **移除文件**
 ```sh
 git rm filename
-```
-
-**强制删除**
-```sh
-git rm -f filename
-```
-
-**移除跟踪但不删除文件**
-```sh
-git rm --cached filename
+git rm -f filename  强制删除
+git rm --cached filename  **移除跟踪但不删除文件**
 ```
 
 **移动文件**
@@ -74,24 +58,17 @@ git mv file_from file_to
 **查看提交历史**
 ```sh
 git log
-查看每次提交内容的差异
-git log -p
-git log -p -2
+git log -p  查看每次提交内容的差异
+git log -p -2 查看每次提交内容的差异，仅显示最近2次的更新。
+git log --stat  仅显示简要的增改行数统计
+git log --graph 图形化显示log
 ```
 
-**修改最后一次提交**
+**撤消操作**
 ```sh
-git commit --amend
-```
-
-**取消已经暂存的文件**
-```sh
-git reset HEAD filename
-```
-
-**取消对文件的修改**
-```sh
-git checkout --filename
+git commit --amend  修改最后一次提交
+git reset HEAD filename 取消已经暂存的文件
+git checkout --filename 取消对文件的修改
 ```
 
 **查看远程仓库及其对应的地址**
