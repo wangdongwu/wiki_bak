@@ -2,7 +2,7 @@
 
 **[[Rails|rails-list]]**
 
-**[[JavaScript|javascript]]**
+**[[JavaScript|javascript-list]]**
 
 **[[Gems|gems-list]]**
 
