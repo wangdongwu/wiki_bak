@@ -32,7 +32,7 @@
 `sudo apt-get install touchpad-indicator `
 
 异常好使，有图为证
-![Alt text](https://github.com/NaixSpirit/wiki/blob/master/2013-03-24.png)
+![Alt text](http://pic.55.la/upload/temp/2013/03/24/13/100004590535864.jpg)
 
 ##Support 2013/03/19 & 2013/03/20
 ---
