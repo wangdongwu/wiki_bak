@@ -1,3 +1,4 @@
+[回头根据这个整理一下](http://blog.csdn.net/xiaoyuemian/article/details/3844305)
 ```js
 function Person(){}
 Person.prototype.name = "Spirit";
