@@ -4,4 +4,6 @@
 [[变量空间|variable-space]]  
 [[原型&继承机制|prototype]]  
 [[this用法|this]]  
+[[JavaScript面向对象编程：封装|encapsulation-in-js]]  
+
 
