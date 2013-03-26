@@ -61,8 +61,10 @@ alert(cat1.eat == cat2.eat); //true
 ```
 
 **五、Protoytpe模式的验证方法**  
-为了配合prototype属性，JavaScript定义了一些辅助方法。
-- isPrototypeOf()
-- a 
-- fasd
-- 
+为了配合 prototype 属性，JavaScript定义了一些辅助方法。  
+**isPrototypeOf**  
+这个方法用来判断，某个 prototype 对象和某个实例之间的关系。
+```js
+alert(Cat.prototype.isPrototypeOf(cat1)); // true
+alert(Cat.prototype.isPrototypeOf(cat2)); // true
+```
