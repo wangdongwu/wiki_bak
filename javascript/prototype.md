@@ -1,5 +1,22 @@
-[回头根据这个整理一下](http://blog.csdn.net/xiaoyuemian/article/details/3844305)
+### 一、基本使用方法
+
+**prototype** 就是“一个给类的对象添加方法的方法”，使用prototype属性，可以给类动态地添加方法，以便在JavaScript中实现“继承”的效果。
+具体来说protype是在IE4及其以后版本引入的一个针对于某一类的对象的方法，当用prototype编写一个类后，如果new一个新的对象，浏览器会自动把prototype中的内容替你附加在对象上。这样，通过利用prototype就可以在JavaScript中实现成员函数的定义，甚至是“继承”的效果。
+
+对已有的类添加方法
 ```js
+//对Number类添加add方法
+Number.prototype.add = function(num){
+  return (this + num);
+}
+
+//对Array类添加push方法
+Array.prototype.push = function(new_element){
+  this[this.length] = new_element;
+  return this.length;
+}
+
+//对自定义类添加方法
 function Person(){}
 Person.prototype.name = "Spirit";
 Person.prototype.age = 24;
@@ -14,14 +31,38 @@ alert(person1.name);
 alert(person2.name);
 ```
 
+### 二、prototype的动态特性及弊端
+
+需要注意的是，prototype使我们可以在类定义完成之后，仍可以随时为其添加方法、属性，随时添加随时使用——也就是prototype的定义具有动态性。
+
+如果当我们调用时根本没有该属性或者方法，将可能导致我们的脚本down掉。对于这个问题，可以使用以下写法：
 ```js
-function Person(){}
+function MyObject(name, size) {
+  this.name = name;
+  this.size = size;
+}
+
+MyObject.prototype.height = 2.26
+MyObject.prototype.tellHeight = function() {
+  return "height of " + this.name + " is " + this.height;
+}
+
+///使用方法,检验该属性或者方法是否存在
+var myobj1 = new MyObject("aha", 3);
+if (myobj1.tellHeight){
+  domDiv.innerHTML += myobj1.tellHeight();
+}
+```
+
+**属性和方法变不变化的问题就严重了**
+```js
+function Person() {}
 Person.prototype = {
   constructor: Person,
   name: 29,
   job: "Software Engineer",
   friends: ["Shelby", "Court"],
-  sayName: function(){
+  sayName: function() {
     alert(this.name);
   }
 };
@@ -34,7 +75,7 @@ alert(person2.friends); // "Shelby", "Court","Van"
 ```
 
 ```js
-function Person(name, age, job){
+function Person(name, age, job) {
   this.name = name;
   this.age = age;
   this,job = job;
