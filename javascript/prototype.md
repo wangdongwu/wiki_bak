@@ -56,6 +56,17 @@ if (myobj1.tellHeight){
 
 **属性和方法变不变化的问题就严重了**
 ```js
+function MyObject() {}
+
+MyObject.prototype.color = "red";
+MyObject.prototype.tellColor = function() { return this.color; }
+
+//修改MyObject的属性，myobj1的属性值也变化了
+var myobj1 = new MyObject();
+MyObject.prototype.color = "green";
+domDiv.innerHTML += myobj1.tellColor();
+
+
 function Person() {}
 Person.prototype = {
   constructor: Person,
@@ -67,6 +78,7 @@ Person.prototype = {
   }
 };
 
+//修改person1的属性，person2的属性也变化了
 var person1 = new Person();
 var person2 = new Person();
 person1.friends.push("Van");
@@ -83,7 +95,7 @@ function Person(name, age, job) {
 }
 Person.prototype = {
   constructor: Person,
-  sayName: function(){
+  sayName: function() {
     alert(this.name);
   }
 };
