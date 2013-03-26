@@ -1,4 +1,4 @@
-**this** 是JavaScript语言的一个关键字。
+[**this**](http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html) 是JavaScript语言的一个关键字。
 
 它代表函数运行时，自动生成的一个内部对象，只能在函数内部使用。
 
