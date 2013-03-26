@@ -1,5 +1,5 @@
-> prototype属性的引入  
-这个属性包含一个对象，所有实例对象需要共享的属性和方法，都放在这个对象里面；那些不需要共享的属性和方法，放在构造函数里面。  
+**prototype属性的引入**  
+> 这个属性包含一个对象，所有实例对象需要共享的属性和方法，都放在这个对象里面；那些不需要共享的属性和方法，放在构造函数里面。  
 实例对象一旦创建，将自动引用prototype对象的属性和方法。也就是说，实例对象的属性和方法，分为两种，一种是本地的，另一种是引用的。  
 ——摘自阮一峰的 [Blog](http://www.ruanyifeng.com/blog/2011/06/designing_ideas_of_inheritance_mechanism_in_javascript.html)
 
