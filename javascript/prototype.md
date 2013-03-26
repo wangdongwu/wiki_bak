@@ -44,7 +44,7 @@ function MyObject(name, size) {
 
 MyObject.prototype.height = 2.26
 MyObject.prototype.tellHeight = function() {
-  return "height of " + this.name + " is " + this.height;
+  return this.name + this.height;
 }
 
 ///使用方法,检验该属性或者方法是否存在
