@@ -96,7 +96,7 @@ alert(person2.friends); // "Shelby", "Court","Van"
 function Person(name, age, job) {
   this.name = name;
   this.age = age;
-  this,job = job;
+  this.job = job;
   this.friends = ["Shelby", "Court"];
 }
 Person.prototype = {
