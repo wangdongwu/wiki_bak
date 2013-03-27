@@ -9,6 +9,7 @@ var Doctor = {
 ```
 怎样让Doctor去继承Chinese？  
 
+-
 
 **一、object()方法**  
 ```js
