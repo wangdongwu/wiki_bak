@@ -24,6 +24,8 @@ alert(Doctor.nation); // China
 ```
 这个object()函数，就是把子对象的prototype属性，指向父对象，从而使得子对象与父对象连在一起。
 
+-
+
 **二、浅拷贝**  
 除了使用“prototype链”以外，还有一种思路：把父对象的属性，全部拷贝给子对象，也能实现继承。
 ```js
@@ -45,6 +47,8 @@ alert(Doctor.birthPlaces); // beijing, shanghai, guangzhou, hongkong
 alert(Chinese.birthPlaces); // beijing, shanghai, guangzhou, hongkong
 ```
 所以，extendCopy()只是拷贝基本类型的数据，这种拷贝叫做“浅拷贝”。
+
+-
 
 **三、深拷贝**  
 递归调用“浅拷贝”即可。
