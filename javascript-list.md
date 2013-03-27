@@ -5,7 +5,9 @@
 [[原型&继承机制|prototype]]  
 [[this用法|this]]  
 [[JavaScript面向对象编程：封装|encapsulation-in-js]]  
-[[Javascript面向对象编程：构造函数的继承|inheritance-in-js]]  
+[[JavaScript面向对象编程：构造函数的继承|inheritance-in-js]]  
+[[JavaScript面向对象编程：非构造函数的继承|inheritance-in-js-2]]  
+
 
 
 
