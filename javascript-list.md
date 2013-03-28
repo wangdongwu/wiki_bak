@@ -8,6 +8,7 @@
 [[JavaScript面向对象编程：构造函数的继承|inheritance-in-js]]  
 [[JavaScript面向对象编程：非构造函数的继承|inheritance-in-js-2]]  
 [[JavaScript中的call和apply|call-and-apply-in-javascript]]  
+[[JavaScript中的闭包|closure-in-javascript]]  
 
 
 
