@@ -1,5 +1,34 @@
 ###对象之间继承的五种方法
 
+-
+**个人思考**
+如何使Food继承Product？
+```js
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+  return this;
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = 'food';
+}
+// Food.prototype = Product('feta', 5)
+var cheese = new Food('feta', 5);
+alert(cheese.name); // feta
+```  
+注意这里无法使用prototype模式继承，如上注释那句，如果使用prototype继承，则Food构造函数的所有实例对象的name属性都成了feta，如下：
+```js
+Food.prototype = new Product('feta', 5);
+
+var test_cheese = new Food('test', 1);
+alert(test_cheese.name); // feta
+```
+**即在父构造函数形参个数不为0的情况下，尽量使用call或者apply继承方式来进行继承。**
+
+-
+
 如何才能使Cat继承Animal？
 ```js
 function Animal() {
