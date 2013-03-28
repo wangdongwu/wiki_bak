@@ -1,7 +1,7 @@
 ###对象之间继承的五种方法
 
 -
-**个人思考**
+**个人思考**  
 如何使Food继承Product？
 ```js
 function Product(name, price) {
