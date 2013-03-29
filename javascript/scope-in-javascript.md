@@ -1,6 +1,7 @@
 ### JavaScript中的函数作用域
 
-JavaScript中没有块级作用域（block scope)，取而代之使用了函数作用域（function scope）： **变量在声明它们的函数体以及这个函数体嵌套的任意函数体内都是有定义的。**
+JavaScript中没有块级作用域（block scope)，取而代之使用了函数作用域（function scope）：  
+**变量在声明它们的函数体以及这个函数体嵌套的任意函数体内都是有定义的。**
 ```js
 function test(o) {
     var i = 0;  // i在整个函数体内均是有定义的
