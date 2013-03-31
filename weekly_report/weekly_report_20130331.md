@@ -37,7 +37,11 @@
 
 ##Support 2013/03/25 - 2013/03/29  
 由于未进组，本周的所有时间都在学习JavaScript。  
+
 学习成果如下：  
+
 1. 理解了JavaScript中的继承机制
-  1.1 [对象之间继承的五种方法](https://github.com/NaixSpirit/wiki/blob/master/javascript/inheritance-in-js.md)
+
+[对象之间继承的五种方法](https://github.com/NaixSpirit/wiki/blob/master/javascript/inheritance-in-js.md)
+
 2. 
