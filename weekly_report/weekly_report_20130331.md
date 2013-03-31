@@ -23,7 +23,7 @@
 首先，Robbin说的是Rails框架的性能问题，跟Ruby语言本身的性能并没有多大联系。成然，Ruby是因为Rails而被大家所知，但是 **Ruby ≠ Rails** ，Ruby还有很多其它的Web开发框架，像[Sinatra](http://www.sinatrarb.com/)，[Padrinorb](http://www.padrinorb.com/)等。  
 再次，Rails框架的强大之处并不在于其性能，而是在于其 **快速开发**，DHH在做Rails宣传的时候用的是Rails15分钟快速开发blog，而不是说Rails的性能有多么多么的好。  
 我认为，一门工具的好坏与流行度，取决与人们对其用途的选择。一门工具在其不擅长的领域被人吐槽，那是最正常不过的了，但是，不能全盘否定这门工具，就像RubyChina论坛上daqing所说的那样：  
-> 创业阶段不用 Rails 是不对的，创业成功还用 Rails 也是不对的~
-
+   > 创业阶段不用 Rails 是不对的，创业成功还用 Rails 也是不对的~
+a 
 ##Support 2013/03/18
 
