@@ -40,7 +40,7 @@
 
 学习笔记整理如下：  
 **JavaScript中的继承机制**  
-[对象之间继承的五种方法](https://github.com/NaixSpirit/wiki/blob/master/javascript/inheritance-in-js.md)  
+> [对象之间继承的五种方法](https://github.com/NaixSpirit/wiki/blob/master/javascript/inheritance-in-js.md)  
 [非构造函数的继承](https://github.com/NaixSpirit/wiki/blob/master/javascript/inheritance-in-js-2.md)
 
  
