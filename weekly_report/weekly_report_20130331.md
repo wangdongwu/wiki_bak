@@ -39,8 +39,16 @@
 由于未进组，本周的所有时间都在学习JavaScript。  
 
 学习笔记整理如下：  
+
 **JavaScript中的继承机制**  
-> [对象之间继承的五种方法](https://github.com/NaixSpirit/wiki/blob/master/javascript/inheritance-in-js.md)  
+> [封装](https://github.com/NaixSpirit/wiki/blob/master/javascript/encapsulation-in-js.md)   
+[构造函数的继承](https://github.com/NaixSpirit/wiki/blob/master/javascript/inheritance-in-js.md)  
 [非构造函数的继承](https://github.com/NaixSpirit/wiki/blob/master/javascript/inheritance-in-js-2.md)
+[prototype属性](https://github.com/NaixSpirit/wiki/blob/master/javascript/prototype.md)  
+
+
+**call & apply**
+> [this用法](https://github.com/NaixSpirit/wiki/blob/master/javascript/this.md)  
+[call & apply](https://github.com/NaixSpirit/wiki/blob/master/javascript/call-and-apply-in-javascript.md)
 
  
