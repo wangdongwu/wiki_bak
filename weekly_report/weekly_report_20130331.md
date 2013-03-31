@@ -44,11 +44,13 @@
 > [封装](https://github.com/NaixSpirit/wiki/blob/master/javascript/encapsulation-in-js.md)   
 [构造函数的继承](https://github.com/NaixSpirit/wiki/blob/master/javascript/inheritance-in-js.md)  
 [非构造函数的继承](https://github.com/NaixSpirit/wiki/blob/master/javascript/inheritance-in-js-2.md)
-[prototype属性](https://github.com/NaixSpirit/wiki/blob/master/javascript/prototype.md)  
+[prototype属性--原型及继承机制](https://github.com/NaixSpirit/wiki/blob/master/javascript/prototype.md)  
 
 
 **call & apply**
 > [this用法](https://github.com/NaixSpirit/wiki/blob/master/javascript/this.md)  
 [call & apply](https://github.com/NaixSpirit/wiki/blob/master/javascript/call-and-apply-in-javascript.md)
+
+个人理解
 
  
