@@ -51,6 +51,7 @@
 > [this用法](https://github.com/NaixSpirit/wiki/blob/master/javascript/this.md)  
 [call & apply](https://github.com/NaixSpirit/wiki/blob/master/javascript/call-and-apply-in-javascript.md)
 
-个人理解
+个人理解：  
+JavaScript有着奇怪的函数式作用域和prototype继承机制，没有块级作用域，感觉其对全局变量难以控制。
 
  
