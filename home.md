@@ -1,6 +1,8 @@
 **[[Ruby|ruby-list]]**
 
-**[[Rails|rails-list]]**
+**[[Rails|rails-list]]**  
+
+**[[Sinatra|sinatra-list]]**  
 
 **[[JavaScript|javascript-list]]**
 
