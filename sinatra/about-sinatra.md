@@ -46,7 +46,7 @@ get '/' do
 end
 ```
 安装gem然后运行：
-```sh
+```bash
 gem insatll sinatra
 ruby myapp.rb
 ```
