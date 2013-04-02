@@ -54,7 +54,7 @@ ruby myapp.rb
 
 ###路由
 
-Routes in your application are matched in top-down order; the first route that matches the incoming request is the one that gets used.
+**Routes in your application are matched in top-down order; the first route that matches the incoming request is the one that gets used.**
 
 **Common Route Definition**
 
@@ -130,3 +130,58 @@ get '/*' do
   "You passed in #{params[:splat]}"
 end
 ```  
+
+**Routes with Regular Expressions**
+
+```ruby
+require 'sinatra'
+
+get %r{/(sp|gr)eedy} do
+  "You got caugt in the greedy route!"
+end
+
+get '/speedy' do
+  "No one calls me :("
+end
+
+get '/greedy' do
+  "No one calls me either!"
+end
+```
+
+**Halting a Request**
+
+```ruby
+require 'sinatra'
+
+get '/halt' do
+  'You will not see this output.'
+  halt 500
+end
+```
+
+**Passing a Request**
+
+```ruby
+require 'sinatra'
+
+before do
+  content_type :txt
+end
+
+get %r{/(sp|gr)eedy} do
+  pass if request.path =~ /\/speedy/
+  "You got caught in the greedy route!"
+end
+
+get '/speedy' do
+  "You must have passed to me!"
+end
+```
+Now, if a user requests "/speedy"
+```bash
+$ curl http://localhost:4567/greedy
+You got caught in the greedy route!
+$ curl http://localhost:4567/speedy
+You must have passed to me!
+```
