@@ -107,3 +107,25 @@ put '/user/:id' do
   u.save
 end
 ```
+
+**Routes with Query String Parameters**
+
+```ruby
+require 'sinatra'
+
+get '/:name' do
+  # assumes a URL in the form /some_name?foo=XYZ
+  "You asked for #{params[:name]} as well as #{params[:foo]}"
+end
+```
+
+**Route with Wildcards**
+
+```ruby
+require 'sinatra'
+
+get '/*' do
+  "You passed in #{params[:splat]}"
+end
+```  
+```
