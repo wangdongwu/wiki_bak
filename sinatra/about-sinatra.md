@@ -124,6 +124,8 @@ end
 ```ruby
 require 'sinatra'
 
+# assumes a URL is localhost:4567/bar/foo
+# the params is {"splat"=>["foo/bar"], "captures"=>["foo/bar"]}
 get '/*' do
   "You passed in #{params[:splat]}"
 end
