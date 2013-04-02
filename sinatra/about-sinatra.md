@@ -1,6 +1,6 @@
 ###简介
 
-Sinatra是一个基于Ruby语言，以最小精力为代价快速创建web应用为目的的DSL。
+Sinatra是一个基于Ruby语言，以最小精力为代价快速创建web应用为目的的DSL(domain-specific language)。
 ```ruby
 # myapp.rb
 require 'sinatra'
