@@ -55,3 +55,9 @@ ruby myapp.rb
 ###路由
 
 Routes in your application are matched in top-down order; the first route that matches the incoming request is the one that gets used.
+
+**Common Route Definition**
+
+```ruby
+require 'sinatra'
+```
