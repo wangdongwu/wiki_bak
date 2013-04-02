@@ -60,4 +60,50 @@ Routes in your application are matched in top-down order; the first route that m
 
 ```ruby
 require 'sinatra'
+
+get '/' do
+  "Triggered via GET"
+end
+
+post '/' do
+  "Triggered via POST"
+end
+
+put '/' do
+  "Triggered via PUT"
+end
+
+delete '/' do
+  "Triggered via DELETE"
+end
+
+patch '/' do
+  "Triggered via PATCH"
+end
+
+options '/' do
+  "Triggered via OPTIONS"
+end
+```
+
+**Route with Parameters**
+
+```ruby
+require 'sinatra'
+
+get '/:name' do
+  "Hello, #{params[:name]}"
+end
+
+post '/login' do
+  username = params[:username]
+  password = params[:password]
+end
+
+put '/user/:id' do
+  u = User.find(params[:id])
+  u.first_name = params[:first_name]
+  u.last_name  = params[:last_name]
+  u.save
+end
 ```
