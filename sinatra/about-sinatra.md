@@ -1,6 +1,10 @@
 ###简介
 
 Sinatra是一个基于Ruby语言，以最小精力为代价快速创建web应用为目的的DSL(domain-specific language)。
+
+Sinatra不是一个框架，它没有内建的ORM层(object-relational mapper)，没有预配置文件等
+
+Sinatra does not force you to adhere to the model-view-controller pattern, or any other pattern for that matter. It is a lightweight wrapper around Rack middleware and encourages a close relationship between service endpoints and the HTTP verbs, making it particularly ideal for web services and APIs(application programming interfaces).
 ```ruby
 # myapp.rb
 require 'sinatra'
@@ -15,3 +19,7 @@ gem insatll sinatra
 ruby myapp.rb
 ```
 在该地址查看：[localhost:4567](http://localhost:4567/)
+
+###路由
+
+Routes in your application are matched in top-down order; the first route that matches the incoming request is the one that gets used.
