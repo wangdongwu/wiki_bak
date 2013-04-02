@@ -185,3 +185,25 @@ You got caught in the greedy route!
 $ curl http://localhost:4567/speedy
 You must have passed to me!
 ```
+
+**Redirecting a Request**
+
+```ruby
+require 'sinatra'
+
+get '/redirect' do 
+  redirect 'http://www.google.com'
+end
+```
+
+**Static Files**
+
+assume that we have a subfolder named **"public"** that contains a single file, like public.html, about.html, contact.html
+
+```ruby 
+require 'sinatra'
+
+get '/public.html' do 
+  'This is delivered via the route'
+end
+```
