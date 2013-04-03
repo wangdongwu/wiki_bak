@@ -1,6 +1,6 @@
 **Sinatra视图中模板的使用**
 
-```ruby
+```erb
 require 'sinatra'
 require 'sinatra/reloader' if development?
 
@@ -15,8 +15,7 @@ end
 get '/contact' do
   erb :contact
 end
-```
-```erb
+
 __END__
 
 @@layout
