@@ -1,6 +1,6 @@
 **Sinatra视图中模板的使用**
 
-```erb
+```ruby
 require 'sinatra'
 require 'sinatra/reloader' if development?
 
