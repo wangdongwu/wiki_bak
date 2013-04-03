@@ -15,7 +15,8 @@ end
 get '/contact' do
   erb :contact
 end
-
+```
+```erb
 __END__
 
 @@layout
