@@ -6,3 +6,4 @@
 [[环绕别名|alias]]  
 [[钩子方法|hook-method]]   
 [[MeterprogrammingKoans|meta-koans]]  
+[[再读Ruby元编程|mete-ruby-again]]  
