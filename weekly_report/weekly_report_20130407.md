@@ -19,10 +19,13 @@
 - [JavaScript编程精解](http://book.douban.com/subject/19933548/)
 
 ##本周心得&吐槽  
-
+新办公环境，很开心～可是之前二楼的那种高椅子木有了，以后没法站着办公了...  
+话说站着办公可以提高效率...
 
 ##Support 2013/04/01 - 2013/04/03 
-由于未进组，本周的所有时间都在学习JavaScript。  
+本周主要在学习Sinatra，了解了其基本的用法，准备用Sinatra写一个小小的网站。
+
+Backbone这一块还没有开始动手，下周必须完成。
 
 学习笔记整理如下：  
 
@@ -32,8 +35,7 @@
 [Sinatra中的session&cookies](https://github.com/NaixSpirit/wiki/blob/master/sinatra/session-and-cookies-in-sinatra.md)    
 
 **Metaprogramming Ruby**
-> [this用法](https://github.com/NaixSpirit/wiki/blob/master/javascript/this.md)    
-[call & apply](https://github.com/NaixSpirit/wiki/blob/master/javascript/call-and-apply-in-javascript.md)    
-
+> [再读元编程](https://github.com/NaixSpirit/wiki/blob/master/ruby/meta-ruby-again.md)    
+  
 个人理解：  
-JavaScript有着奇怪的函数式作用域和prototype继承机制，没有块级作用域，感觉其对全局变量难以控制。
+理解Ruby元编程，其实就是对整个Ruby对象模型体系的理解，理解了对象模型体系，就发现，元编程也就那么回事，没有想象中的那么高深。
