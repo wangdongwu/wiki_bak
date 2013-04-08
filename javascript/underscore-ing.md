@@ -1,8 +1,7 @@
 > 学习了两个礼拜JavaScript，光看基础书没有什么太大的进展。  
 直接进入underscore.js和backbone.js学习。
 
-Underscore重点函数解释及其用法
-
+##Underscore重点函数解释及其用法
 ###each  
 **alias: forEach**  
 遍历list中的所有元素，按顺序用遍历输出每个元素。如果传递了context参数，则把iterator绑定到context对象上。   
