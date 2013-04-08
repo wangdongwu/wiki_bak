@@ -1,4 +1,4 @@
-**each**   
+###each   
 遍历list中的所有元素，按顺序用遍历输出每个元素。如果传递了context参数，则把iterator绑定到context对象上。   
 每次调用iterator都会传递三个参数：(element, index, list)。    
 如果list是个JavaScript对象，iterator的参数是 (value, key, list))。    
