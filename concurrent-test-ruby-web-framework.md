@@ -24,9 +24,10 @@ Transfer rate:          51.76 \[Kbytes/sec] received
 
 -
 
-###并发测试结果  
+##并发测试结果  
 
-**1. Sinatra + Unicorn**    
+###1. Sinatra + Unicorn
+
 Sinatra配置：
 ```ruby
 get '/' do
