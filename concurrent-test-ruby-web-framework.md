@@ -1,3 +1,5 @@
+##环境配置
+
 **并发测试** 属于 **压力测试** 的一项基本指标。  
 
 **测试环境**  
@@ -22,8 +24,6 @@ Transfer rate:          51.76 \[Kbytes/sec] received
 `ab -n 8000 -c 250 http://0.0.0.0:3001/`  
 表示同时处理8000个请求，250个并发。
 
--
-
 ##并发测试结果  
 
 ###1. Sinatra + Unicorn
@@ -39,22 +39,75 @@ Unicorn配置：
 worker_processes 5
 timeout 30
 ```
-**ab -n 7000 -c 250 http://0.0.0.0:3001/  -- Sinatra + Unicorn** 
+
+**ab -n 5000 -c 50 http://0.0.0.0:3001/  -- Sinatra + Unicorn** 
+```
+Concurrency Level:      50
+Time taken for tests:   2.629 seconds
+Complete requests:      5000
+Requests per second:    1902.18 [#/sec] (mean)
+Time per request:       26.286 [ms] (mean)
+Time per request:       0.526 [ms] (mean, across all concurrent requests)
+Transfer rate:          546.13 [Kbytes/sec] received
+```
+
+**ab -n 5000 -c 100 http://0.0.0.0:3001/  -- Sinatra + Unicorn** 
+```
+Concurrency Level:      100
+Time taken for tests:   2.618 seconds
+Complete requests:      5000
+Requests per second:    1909.82 [#/sec] (mean)
+Time per request:       52.361 [ms] (mean)
+Time per request:       0.524 [ms] (mean, across all concurrent requests)
+Transfer rate:          548.33 [Kbytes/sec] received
+```
+
+**ab -n 5000 -c 150 http://0.0.0.0:3001/  -- Sinatra + Unicorn**   
+```
+Concurrency Level:      150
+Time taken for tests:   5.499 seconds
+Complete requests:      5000
+Requests per second:    909.22 [#/sec] (mean)
+Time per request:       164.977 [ms] (mean)
+Time per request:       1.100 [ms] (mean, across all concurrent requests)
+Transfer rate:          261.04 [Kbytes/sec] received
+```
+
+**ab -n 5000 -c 200 http://0.0.0.0:3001/  -- Sinatra + Unicorn**   
+**failed**
+
+###2. Sinatra + Unicorn + Rainbows
+
+Rainbows配置：
+```ruby
+Rainbows! do
+  use :ThreadSpawn  # 开启线程模式
+  worker_connections 400
+end
+```
+
+
+**ab -n 7000 -c 250 http://0.0.0.0:3001/  -- Sinatra + Unicorn + Rainbows** 
 ```
 Concurrency Level:      250
-Time taken for tests:   5.421 seconds
-Complete requests:      7000
-Failed requests:        0
-Write errors:           0
-Total transferred:      2058000 bytes
-HTML transferred:       343000 bytes
-Requests per second:    1291.16 [#/sec] (mean)
-Time per request:       193.624 [ms] (mean)
-Time per request:       0.774 [ms] (mean, across all concurrent requests)
-Transfer rate:          370.70 [Kbytes/sec] received
+Time taken for tests:   3.589 seconds
+Requests per second:    1950.43 [#/sec] (mean)
+Time per request:       128.177 [ms] (mean)
+Time per request:       0.513 [ms] (mean, across all concurrent requests)
+Transfer rate:          559.99 [Kbytes/sec] received
 ```
 
+**ab -n 7000 -c 300 http://0.0.0.0:3001/  -- Sinatra + Unicorn + Rainbows** 
+```
+Concurrency Level:      300
+Time taken for tests:   13.665 seconds
+Requests per second:    512.26 [#/sec] (mean)
+Time per request:       585.642 [ms] (mean)
+Time per request:       1.952 [ms] (mean, across all concurrent requests)
+Transfer rate:          147.07 [Kbytes/sec] received
+```
 
+**ab -n 7000 -c 350 http://0.0.0.0:3001/  -- Sinatra + Unicorn + Rainbows** 
 
 
  
