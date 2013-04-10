@@ -9,6 +9,8 @@ Ruby Web框架：Sinatra，Padrino，Goliath，Rails
 HTTP server：Unicorn，Rainbows    
 测试工具：Apache ab  
 
+-
+
 ###测试方法   
 
 **Apache ab 命令**  
@@ -33,6 +35,8 @@ Time per request: xxx \[ms] (mean, across all concurrent requests)
 Transfer rate: xxx \[Kbytes/sec] received  
 
 [调试脚本]() 
+
+-
 
 ###并发测试结果  
 
