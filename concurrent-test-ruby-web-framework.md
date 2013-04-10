@@ -39,7 +39,7 @@ worker_processes 5
 timeout 30
 ```
 **ab -n 7000 -c 250 http://0.0.0.0:3001/  -- Sinatra + Unicorn** 
-```ruby
+```sh
 Concurrency Level:      250
 Time taken for tests:   5.421 seconds
 Complete requests:      7000
