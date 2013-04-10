@@ -50,7 +50,7 @@ worker_processes 5
 timeout 30
 ```
 
-> **5000个请求， 50个并发，运行5次，结果如下：**
+> **5000个请求，50个并发，运行5次，结果如下：**
 ```
 Concurrency Level:      50.0|50.0|50.0|50.0|50.0|
 Time taken for tests:   2.815|2.99|3.033|3.055|3.012|
@@ -72,7 +72,7 @@ Transfer rate:          481.97  [Kbytes/sec] received
 ```
 
 
-> **5000个请求， 100个并发，运行5次，结果如下：**
+> **5000个请求，100个并发，运行5次，结果如下：**
 ```
 Concurrency Level:        100.0|100.0|100.0|100.0|100.0|
 Time taken for tests:     2.845|2.981|3.044|3.084|3.093|
@@ -93,27 +93,10 @@ Time per request:         0.60 [ms] (mean, across all concurrent requests)
 Transfer rate:            477.48 [Kbytes/sec] received
 ```
 
-
-
-
-
-
-
-
-
-**ab -n 5000 -c 150 http://0.0.0.0:3001/  -- Sinatra + Unicorn**   
+> **5000个请求， 100个并发，运行5次，脚本运行失败：**
 ```
-Concurrency Level:      150
-Time taken for tests:   5.499 seconds
-Complete requests:      5000
-Requests per second:    909.22 [#/sec] (mean)
-Time per request:       164.977 [ms] (mean)
-Time per request:       1.100 [ms] (mean, across all concurrent requests)
-Transfer rate:          261.04 [Kbytes/sec] received
+apr_socket_recv: Connection reset by peer (104)
 ```
-
-**ab -n 5000 -c 200 http://0.0.0.0:3001/  -- Sinatra + Unicorn**   
-`failed`
 
 ###2. Sinatra + Unicorn + Rainbows
 
