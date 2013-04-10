@@ -38,9 +38,11 @@ Unicorn配置：
 worker_processes 5
 timeout 30
 ```
-ab -n 7000 -c 250 http://0.0.0.0:3001/  -- Sinatra + Unicorn
+**ab -n 7000 -c 250 http://0.0.0.0:3001/  -- Sinatra + Unicorn** 
+```ruby
 
-详细测试报告请见：[unicorn-first-7000-250](unicorn-first-7000-250)
+```
+
 
 
 
