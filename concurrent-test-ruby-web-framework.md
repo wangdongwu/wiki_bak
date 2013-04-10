@@ -39,8 +39,18 @@ worker_processes 5
 timeout 30
 ```
 **ab -n 7000 -c 250 http://0.0.0.0:3001/  -- Sinatra + Unicorn** 
-```ruby
-
+```txt
+Concurrency Level:      250
+Time taken for tests:   5.421 seconds
+Complete requests:      7000
+Failed requests:        0
+Write errors:           0
+Total transferred:      2058000 bytes
+HTML transferred:       343000 bytes
+Requests per second:    1291.16 [#/sec] (mean)
+Time per request:       193.624 [ms] (mean)
+Time per request:       0.774 [ms] (mean, across all concurrent requests)
+Transfer rate:          370.70 [Kbytes/sec] received
 ```
 
 
