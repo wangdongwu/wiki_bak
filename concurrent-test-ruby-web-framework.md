@@ -85,13 +85,13 @@ timeout 30
 
 **output_result(50, 5, 5000), 5000个请求， 50个并发，运行5次如下：**
 ```
-Concurrency Level: 50  
-Complete requests: 5000  
-Time taken for tests: 3.339 seconds, 3.144 seconds, 3.152 seconds, 3.003 seconds, 2.998 seconds   
-Requests per second: 1497.48 [#/sec] (mean), 1590.26 [#/sec] (mean), 1586.35 [#/sec] (mean), 1665.06 [#/sec] (mean), 1667.86 [#/sec] (mean)
-Time per request: 33.389 [ms] (mean), 0.668 [ms] (mean, across all concurrent requests), 31.441 [ms] (mean), 0.629 [ms] (mean, across all concurrent requests), 31.519 [ms] (mean), 0.630 [ms] (mean, across all concurrent requests), 30.029 [ms] (mean), 0.601 [ms] (mean, across all concurrent requests), 29.979 [ms] (mean), 0.600 [ms] (mean, across all concurrent requests)
-Transfer rate: 429.94 [Kbytes/sec] received, 456.58 [Kbytes/sec] received, 455.46 [Kbytes/sec] received, 478.06 [Kbytes/sec] received, 478.86 [Kbytes/sec] received
-
+Concurrency Level:      50
+Complete requests:      5000
+Time taken for tests:   3.339 , 3.144, 3.152, 3.003, 2.998
+Requests per second:    1497.48, 1590.26, 1586.35, 1665.06, 1667.86
+Time per request:       33.389, 31.441, 31.519, 30.029, 29.979
+Time per request:       0.668, 0.629, 0.630, 0.601, 29.979, 0.600
+Transfer rate:          429.94, 456.58, 455.46, 478.06, 478.86
 
 均值：
 Concurrency Level:      50
