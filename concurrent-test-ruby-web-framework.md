@@ -1,8 +1,7 @@
-##环境配置
+> **并发测试** 属于 **压力测试** 的一项基本指标。  
 
-**并发测试** 属于 **压力测试** 的一项基本指标。  
+###测试环境  
 
-**测试环境**  
 硬件：华硕K43SJ笔记本，i5 6核 2.50GHZ，4G内存  
 操作系统：Ubuntu 桌面版 12.04 LTS  
 Ruby版本：1.9.3，2.0.0  
@@ -13,12 +12,14 @@ HTTP server：Unicorn，Rainbows
 ###测试方法   
 
 **Apache ab 命令**  
+
 `ab -n xxx -c yyy http://0.0.0.0:3001/`  
 表示 http://0.0.0.0:3001/ 同时处理 xxx 个请求，yyy 个并发。  
 保持xxx请求个数不变，yyy并发个数递增式测试。  
 每条命令均取 **5** 次平均值保证其准确性。
 
 **主要关注指标**  
+
 每秒事务数（吞吐率） 
 Requests per second: xxx \[#/sec] (mean)   
 
@@ -33,10 +34,9 @@ Transfer rate: xxx \[Kbytes/sec] received
 
 [调试脚本]() 
 
+###并发测试结果  
 
-##并发测试结果  
-
-###1. Sinatra + Unicorn
+####1. Sinatra + Unicorn
 
 Sinatra配置：
 ```ruby
@@ -98,7 +98,7 @@ Transfer rate:          477.48 [Kbytes/sec] received
 apr_socket_recv: Connection reset by peer (104)
 ```
 
-###2. Sinatra + Unicorn + Rainbows
+####2. Sinatra + Unicorn + Rainbows
 
 Rainbows配置：
 ```ruby
