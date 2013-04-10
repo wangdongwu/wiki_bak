@@ -19,14 +19,17 @@ HTTP server：Unicorn，Rainbows
 每条命令均取 **5** 次平均值保证其准确性。
 
 **主要关注指标**  
-每秒事务数（吞吐率）    越大越好  
-Requests per second:    xxx \[#/sec] (mean)   
-平均事务响应时间        越小越好  
-Time per request:       xxx \[ms] (mean)    
-每个请求实际运行时间    越小越好   
-Time per request:       xxx \[ms] (mean, across all concurrent requests)   
-平均每秒网络流量        越大越好   
-Transfer rate:          xxx \[Kbytes/sec] received  
+每秒事务数（吞吐率） 
+Requests per second: xxx \[#/sec] (mean)   
+
+平均事务响应时间  
+Time per request: xxx \[ms] (mean)    
+
+每个请求实际运行时间  
+Time per request: xxx \[ms] (mean, across all concurrent requests) 
+
+平均每秒网络流量  
+Transfer rate: xxx \[Kbytes/sec] received  
 
 **调试脚本**  
 ```ruby
@@ -85,22 +88,32 @@ timeout 30
 Concurrency Level: 50  
 Complete requests: 5000  
 Time taken for tests: 3.339 seconds, 3.144 seconds, 3.152 seconds, 3.003 seconds, 2.998 seconds   
-Requests per second: 1497.48 [#/sec] (mean), 1590.26 [#/sec] (mean), 1586.35 [#/sec] (mean), 1665.06 [#/sec] (mean), 1667.86 [#/sec] (mean), 
+Requests per second: 1497.48 [#/sec] (mean), 1590.26 [#/sec] (mean), 1586.35 [#/sec] (mean), 1665.06 [#/sec] (mean), 1667.86 [#/sec] (mean)
 Time per request: 33.389 [ms] (mean), 0.668 [ms] (mean, across all concurrent requests), 31.441 [ms] (mean), 0.629 [ms] (mean, across all concurrent requests), 31.519 [ms] (mean), 0.630 [ms] (mean, across all concurrent requests), 30.029 [ms] (mean), 0.601 [ms] (mean, across all concurrent requests), 29.979 [ms] (mean), 0.600 [ms] (mean, across all concurrent requests)
 Transfer rate: 429.94 [Kbytes/sec] received, 456.58 [Kbytes/sec] received, 455.46 [Kbytes/sec] received, 478.06 [Kbytes/sec] received, 478.86 [Kbytes/sec] received
-```
-
-```
-均值：  
-Time taken for tests: 3.127 seconds   
-Requests per second: 31.27 [ms] (mean)
-Requests per second: 0.626 [ms] (mean, across all concurrent requests)
-Transfer rate: 459.78  [Kbytes/sec] received
-```
 
 
-**ab -n 5000 -c 100 http://0.0.0.0:3001/  -- Sinatra + Unicorn** 
+均值：
+Concurrency Level:      50
+Time taken for tests:   3.127 seconds  
+Complete requests:      5000
+Requests per second:    1601.40 [#/sec] (mean)
+Time per request:       31.27 [ms] (mean)
+Time per request:       0.626 [ms] (mean, across all concurrent requests)
+Transfer rate:          459.78  [Kbytes/sec] received
 ```
+
+**output_result(100, 5, 5000), 5000个请求， 50个并发，运行5次如下：**
+```
+Concurrency Level: 100
+Time taken for tests: 2.922 seconds, 3.050 seconds, 3.073 seconds, 3.036 seconds, 3.075 seconds 
+Complete requests: 5000
+Requests per second: 1711.19 [#/sec] (mean), 1639.27 [#/sec] (mean), 1627.00 [#/sec] (mean), 1647.08 [#/sec] (mean), 1626.02 [#/sec] (mean) 
+Time per request: 58.439 [ms] (mean), 0.584 [ms] (mean, across all concurrent requests), 61.003 [ms] (mean), 0.610 [ms] (mean, across all concurrent requests), 61.463 [ms] (mean), 0.615 [ms] (mean, across all concurrent requests), 60.714 [ms] (mean), 0.607 [ms] (mean, across all concurrent requests), 61.500 [ms] (mean), 0.615 [ms] (mean, across all concurrent requests)
+Transfer rate: 491.30 [Kbytes/sec] received, 470.65 [Kbytes/sec] received, 467.13 [Kbytes/sec] received, 472.89 [Kbytes/sec] received, 466.85 [Kbytes/sec] received 
+
+
+均值：
 Concurrency Level:      100
 Time taken for tests:   2.618 seconds
 Complete requests:      5000
