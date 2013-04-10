@@ -132,22 +132,22 @@ Transfer rate:          536.00 [Kbytes/sec] received
 > **5000个请求，100个并发，运行5次，结果如下：**
 ```
 Concurrency Level:      100.0|100.0|100.0|100.0|100.0|
-Time taken for tests:   2.845|2.981|3.044|3.084|3.093|
+Time taken for tests:   2.485|2.653|2.676|2.712|2.712|
 Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
-Requests per second:    1757.27|1677.23|1642.47|1621.51|1616.77|
-Time per request:       56.906|59.622|60.884|61.671|61.852|
-Time per request:       0.569|0.596|0.609|0.617|0.619|
-Transfer rate:          504.53|481.55|471.57|465.55|464.19|
+Requests per second:    2012.16|1884.33|1868.15|1843.96|1843.33|
+Time per request:       49.698|53.069|53.529|54.231|54.25|
+Time per request:       0.497|0.531|0.535|0.542|0.542|
+Transfer rate:          577.71|541.01|536.36|529.42|529.24|
 ```
 **均值：**
 ```
 Concurrency Level:      100.00
-Time taken for tests:   3.01 seconds
+Time taken for tests:   2.65 seconds
 Complete requests:      5000.00
-Requests per second:    1663.05 [#/sec] (mean)
-Time per request:       60.19 [ms] (mean)
-Time per request:       0.60 [ms] (mean, across all concurrent requests)
-Transfer rate:          477.48 [Kbytes/sec] received
+Requests per second:    1890.39 [#/sec] (mean)
+Time per request:       52.96 [ms] (mean)
+Time per request:       0.53 [ms] (mean, across all concurrent requests)
+Transfer rate:          542.75 [Kbytes/sec] received
 ```
 
 > **5000个请求， 100个并发，运行5次，脚本运行失败：**
