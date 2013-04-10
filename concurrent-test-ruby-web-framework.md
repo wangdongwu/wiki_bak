@@ -31,62 +31,8 @@ Time per request: xxx \[ms] (mean, across all concurrent requests)
 平均每秒网络流量  
 Transfer rate: xxx \[Kbytes/sec] received  
 
-**调试脚本**  
-```ruby
-$hash = {}
-COM_RE = /Concurrency|Time taken|Complete|Requests|Transfer rate/
+[调试脚本]() 
 
-def get_ab_command_content(concurrency)
-  con = `ab -n 5000 -c #{concurrency} http://0.0.0.0:3001/`
-  m = con.split("\n\n")
-  n = m[4].split("\n")
-  n.each do |i|
-    if i =~ COM_RE
-      split_con = i.split(":")
-      if $hash.has_key?(split_con[0])
-        $hash[split_con[0]] << string2float(split_con[1]).to_s + "|"
-      else
-        $hash[split_con[0]] = string2float(split_con[1]).to_s + "|"
-      end
-    elsif i =~ /Time per request/
-      split_con = i.split(":")
-        if split_con[1] =~ /all concurrent/
-          if $hash.has_key?(split_con[0]  + "(concurrent)")
-            $hash[split_con[0] + "(concurrent)"] << string2float(split_con[1]).to_s + "|"
-          else
-            $hash[split_con[0] + "(concurrent)"] = string2float(split_con[1]).to_s + "|"
-          end
-        else
-          if $hash.has_key?(split_con[0])
-            $hash[split_con[0]] << string2float(split_con[1]).to_s + "|"
-          else
-            $hash[split_con[0]] = string2float(split_con[1]).to_s + "|"
-          end
-        end
-    end
-  end
-end
-
-def string2float(string)
-  sum = 0.0
-  arr = string.strip.split(" ")
-  arr.each do |i|
-    sum += i.to_f
-  end
-  sum
-end
-
-def hash_average_value(hash)
-  hash.each do |k, v|
-    sum = 0
-    arr = v.split("|")
-    arr.each do |i|
-      sum += i.to_f
-    end
-    hash[k] = format("%.2f", (sum / arr.size)).to_s
-  end
-end
-```
 
 ##并发测试结果  
 
