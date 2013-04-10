@@ -220,3 +220,30 @@ Time per request:       0.84 [ms] (mean, across all concurrent requests)
 Transfer rate:          343.66 [Kbytes/sec] received
 ```
 
+
+> **5000个请求， 550个并发，运行5次，结果如下：**
+```
+Concurrency Level:      550.0|550.0|550.0|550.0|550.0|
+Time taken for tests:   5.02|8.298|3.469|5.651|8.483|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    995.97|602.54|1441.54|884.78|589.41|
+Time per request:       552.224|912.796|381.536|621.62|933.139|
+Time per request:       1.004|1.66|0.694|1.13|1.697|
+Transfer rate:          285.95|173.0|413.88|254.03|169.22|
+```
+**均值：**
+```
+Concurrency Level:      550.00
+Time taken for tests:   6.18 seconds
+Complete requests:      5000.00
+Requests per second:    902.85 [#/sec] (mean)
+Time per request:       680.26 [ms] (mean)
+Time per request:       1.24 [ms] (mean, across all concurrent requests)
+Transfer rate:          259.22 [Kbytes/sec] received
+```
+
+
+> **5000个请求， 600个并发，运行5次，脚本运行失败：**
+```
+apr_poll: The timeout specified has expired (70007)
+```
