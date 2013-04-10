@@ -74,7 +74,7 @@ Transfer rate:          261.04 [Kbytes/sec] received
 ```
 
 **ab -n 5000 -c 200 http://0.0.0.0:3001/  -- Sinatra + Unicorn**   
-**failed**
+`failed`
 
 ###2. Sinatra + Unicorn + Rainbows
 
@@ -87,27 +87,49 @@ end
 ```
 
 
-**ab -n 7000 -c 250 http://0.0.0.0:3001/  -- Sinatra + Unicorn + Rainbows** 
+**ab -n 5000 -c 50 http://0.0.0.0:3001/  -- Sinatra + Unicorn + Rainbows** 
 ```
-Concurrency Level:      250
-Time taken for tests:   3.589 seconds
-Requests per second:    1950.43 [#/sec] (mean)
-Time per request:       128.177 [ms] (mean)
-Time per request:       0.513 [ms] (mean, across all concurrent requests)
-Transfer rate:          559.99 [Kbytes/sec] received
-```
-
-**ab -n 7000 -c 300 http://0.0.0.0:3001/  -- Sinatra + Unicorn + Rainbows** 
-```
-Concurrency Level:      300
-Time taken for tests:   13.665 seconds
-Requests per second:    512.26 [#/sec] (mean)
-Time per request:       585.642 [ms] (mean)
-Time per request:       1.952 [ms] (mean, across all concurrent requests)
-Transfer rate:          147.07 [Kbytes/sec] received
+Concurrency Level:      50
+Time taken for tests:   2.544 seconds
+Complete requests:      5000
+Requests per second:    1965.79 [#/sec] (mean)
+Time per request:       25.435 [ms] (mean)
+Time per request:       0.509 [ms] (mean, across all concurrent requests)
+Transfer rate:          564.40 [Kbytes/sec] received
 ```
 
-**ab -n 7000 -c 350 http://0.0.0.0:3001/  -- Sinatra + Unicorn + Rainbows** 
+**ab -n 5000 -c 100 http://0.0.0.0:3001/  -- Sinatra + Unicorn + Rainbows** 
+```
+Concurrency Level:      100
+Time taken for tests:   2.450 seconds
+Complete requests:      5000
+Requests per second:    2041.16 [#/sec] (mean)
+Time per request:       48.992 [ms] (mean)
+Time per request:       0.490 [ms] (mean, across all concurrent requests)
+Transfer rate:          586.03 [Kbytes/sec] received
+```
+
+**ab -n 5000 -c 150 http://0.0.0.0:3001/  -- Sinatra + Unicorn + Rainbows** 
+```
+Concurrency Level:      150
+Time taken for tests:   2.491 seconds
+Complete requests:      5000
+Requests per second:    2007.35 [#/sec] (mean)
+Time per request:       74.725 [ms] (mean)
+Time per request:       0.498 [ms] (mean, across all concurrent requests)
+Transfer rate:          576.33 [Kbytes/sec] received
+```
+
+**ab -n 5000 -c 200 http://0.0.0.0:3001/  -- Sinatra + Unicorn + Rainbows**
+```
+Concurrency Level:      200
+Time taken for tests:   2.498 seconds
+Complete requests:      5000
+Requests per second:    2001.37 [#/sec] (mean)
+Time per request:       99.931 [ms] (mean)
+Time per request:       0.500 [ms] (mean, across all concurrent requests)
+Transfer rate:          574.61 [Kbytes/sec] received
+```
 
 
  
