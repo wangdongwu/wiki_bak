@@ -28,6 +28,44 @@ Time per request:       xxx \[ms] (mean, across all concurrent requests)
 平均每秒网络流量        越大越好   
 Transfer rate:          xxx \[Kbytes/sec] received  
 
+**调试脚本**  
+```ruby
+$hash = {}
+RE = /Concurrency|Time taken|Complete|Requests|Time per request|Transfer rate/
+
+def get_ab_command_content(concurrency)
+  con = `ab -n 5000 -c #{concurrency} http://0.0.0.0:3001/`
+  m = con.split("\n\n")
+  n = m[4].split("\n")
+  n.each do |i|
+    if i =~ RE
+      split_con = i.split(":")
+      if $hash.has_key?(split_con[0])
+        if $hash[split_con[0]] == split_con[1].strip + ", "
+          next
+        else
+          $hash[split_con[0]] << split_con[1].strip + ", "
+        end
+      else
+        $hash[split_con[0]] = (split_con[1].strip + ", ")
+      end
+    end
+  end
+end
+
+def output_result(concurrency, times = 5)
+  1.upto(times) do
+    get_ab_command_content(concurrency)
+  end
+
+  $hash.each do |k, v|
+    puts k + ": " + v
+  end
+end
+
+output_result(50)
+```
+
 ##并发测试结果  
 
 ###1. Sinatra + Unicorn
@@ -43,17 +81,19 @@ Unicorn配置：
 worker_processes 5
 timeout 30
 ```
-**ab -n 5000 -c 50 http://0.0.0.0:3001/  -- Sinatra + Unicorn** 
+
+`output_result(50)`
 5000个请求， 50个并发，运行5次如下：
 ```
-Concurrency Level:      50
-Time taken for tests:   2.722, 2.737, 2.744, seconds
-Complete requests:      5000
-Requests per second:    1836.57, 1826.87, 1822.00 [#/sec] (mean)
-Time per request:       27.225, 27.369,  [ms] (mean)
-Time per request:       0.544, 0.547,  [ms] (mean, across all concurrent requests)
-Transfer rate:          527.30, 524.51,  [Kbytes/sec] received
+Concurrency Level: 50  
+Complete requests: 5000  
+Time taken for tests: 3.339 seconds, 3.144 seconds, 3.152 seconds, 3.003 seconds, 2.998 seconds   
+Requests per second: 1497.48 [#/sec] (mean), 1590.26 [#/sec] (mean), 1586.35 [#/sec] (mean), 1665.06 [#/sec] (mean), 1667.86 [#/sec] (mean), 
+Time per request: 33.389 [ms] (mean), 0.668 [ms] (mean, across all concurrent requests), 31.441 [ms] (mean), 0.629 [ms] (mean, across all concurrent requests), 31.519 [ms] (mean), 0.630 [ms] (mean, across all concurrent requests), 30.029 [ms] (mean), 0.601 [ms] (mean, across all concurrent requests), 29.979 [ms] (mean), 0.600 [ms] (mean, across all concurrent requests)
+Transfer rate: 429.94 [Kbytes/sec] received, 456.58 [Kbytes/sec] received, 455.46 [Kbytes/sec] received, 478.06 [Kbytes/sec] received, 478.86 [Kbytes/sec] received
 ```
+均值：
+Time taken for tests: 3.127 seconds
 
 **ab -n 5000 -c 100 http://0.0.0.0:3001/  -- Sinatra + Unicorn** 
 ```
