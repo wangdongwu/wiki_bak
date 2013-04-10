@@ -20,7 +20,9 @@
 
 **[[说明|instructions]]**  
 
-**[[周报|weeklyreport-list]]**
+**[[周报|weeklyreport-list]]**   
+
+**[[Ruby-Web框架并发测试|concurrent-test-ruby-web-framework]]  
 
 
 
