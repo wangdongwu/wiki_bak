@@ -33,8 +33,8 @@ Transfer rate:          xxx \[Kbytes/sec] received
 $hash = {}
 RE = /Concurrency|Time taken|Complete|Requests|Time per request|Transfer rate/
 
-def get_ab_command_content(concurrency)
-  con = `ab -n 5000 -c #{concurrency} http://0.0.0.0:3001/`
+def get_ab_command_content(concurrency, request = 5000)
+  con = `ab -n #{request} -c #{concurrency} http://0.0.0.0:3001/`
   m = con.split("\n\n")
   n = m[4].split("\n")
   n.each do |i|
@@ -53,17 +53,15 @@ def get_ab_command_content(concurrency)
   end
 end
 
-def output_result(concurrency, times = 5)
+def output_result(concurrency, times = 5, request = 5000)
   1.upto(times) do
-    get_ab_command_content(concurrency)
+    get_ab_command_content(concurrency, request)
   end
 
   $hash.each do |k, v|
     puts k + ": " + v
   end
 end
-
-output_result(50)
 ```
 
 ##并发测试结果  
@@ -82,7 +80,7 @@ worker_processes 5
 timeout 30
 ```
 
-`output_result(50)`
+`output_result(50, 5, 5000)`  
 5000个请求， 50个并发，运行5次如下：
 ```
 Concurrency Level: 50  
@@ -92,8 +90,15 @@ Requests per second: 1497.48 [#/sec] (mean), 1590.26 [#/sec] (mean), 1586.35 [#/
 Time per request: 33.389 [ms] (mean), 0.668 [ms] (mean, across all concurrent requests), 31.441 [ms] (mean), 0.629 [ms] (mean, across all concurrent requests), 31.519 [ms] (mean), 0.630 [ms] (mean, across all concurrent requests), 30.029 [ms] (mean), 0.601 [ms] (mean, across all concurrent requests), 29.979 [ms] (mean), 0.600 [ms] (mean, across all concurrent requests)
 Transfer rate: 429.94 [Kbytes/sec] received, 456.58 [Kbytes/sec] received, 455.46 [Kbytes/sec] received, 478.06 [Kbytes/sec] received, 478.86 [Kbytes/sec] received
 ```
-均值：
-Time taken for tests: 3.127 seconds
+
+```
+均值：  
+Time taken for tests: 3.127 seconds   
+Requests per second: 31.27 [ms] (mean)
+Requests per second: 0.626 [ms] (mean, across all concurrent requests)
+Transfer rate: 459.78  [Kbytes/sec] received
+``
+
 
 **ab -n 5000 -c 100 http://0.0.0.0:3001/  -- Sinatra + Unicorn** 
 ```
