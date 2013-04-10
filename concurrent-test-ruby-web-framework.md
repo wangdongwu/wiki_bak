@@ -24,8 +24,9 @@ Transfer rate:          51.76 \[Kbytes/sec] received
 
 -
 
-**并发测试结果**  
-1. Sinatra + Unicorn  
+###并发测试结果  
+
+**1. Sinatra + Unicorn**    
 Sinatra配置：
 ```ruby
 get '/' do
@@ -37,6 +38,9 @@ Unicorn配置：
 worker_processes 5
 timeout 30
 ```
+ab -n 7000 -c 250 http://0.0.0.0:3001/  -- Sinatra + Unicorn
+
+
 
  
 
