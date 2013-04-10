@@ -80,8 +80,7 @@ worker_processes 5
 timeout 30
 ```
 
-`output_result(50, 5, 5000)`  
-5000个请求， 50个并发，运行5次如下：
+**output_result(50, 5, 5000), 5000个请求， 50个并发，运行5次如下：**
 ```
 Concurrency Level: 50  
 Complete requests: 5000  
