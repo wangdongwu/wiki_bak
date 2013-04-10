@@ -22,6 +22,8 @@
 
 **[[周报|weeklyreport-list]]**   
 
+**[[Web压力测试|web-stress-test]]**  
+
 **[[Ruby-Web框架并发测试|concurrent-test-ruby-web-framework]]**  
 
 
