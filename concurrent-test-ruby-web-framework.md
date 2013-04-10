@@ -50,7 +50,7 @@ worker_processes 5
 timeout 30
 ```
 
-> **5000个请求， 50个并发，运行5次如下：**
+> **5000个请求， 50个并发，运行5次，结果如下：**
 ```
 Concurrency Level:      50.0|50.0|50.0|50.0|50.0|
 Time taken for tests:   2.815|2.99|3.033|3.055|3.012|
@@ -71,25 +71,35 @@ Time per request:       0.60 [ms] (mean, across all concurrent requests)
 Transfer rate:          481.97  [Kbytes/sec] received
 ```
 
-**output_result(100, 5, 5000), 5000个请求， 50个并发，运行5次如下：**
+
+> **5000个请求， 100个并发，运行5次，结果如下：**
 ```
-Concurrency Level: 100
-Time taken for tests: 2.922 seconds, 3.050 seconds, 3.073 seconds, 3.036 seconds, 3.075 seconds 
-Complete requests: 5000
-Requests per second: 1711.19 [#/sec] (mean), 1639.27 [#/sec] (mean), 1627.00 [#/sec] (mean), 1647.08 [#/sec] (mean), 1626.02 [#/sec] (mean) 
-Time per request: 58.439 [ms] (mean), 0.584 [ms] (mean, across all concurrent requests), 61.003 [ms] (mean), 0.610 [ms] (mean, across all concurrent requests), 61.463 [ms] (mean), 0.615 [ms] (mean, across all concurrent requests), 60.714 [ms] (mean), 0.607 [ms] (mean, across all concurrent requests), 61.500 [ms] (mean), 0.615 [ms] (mean, across all concurrent requests)
-Transfer rate: 491.30 [Kbytes/sec] received, 470.65 [Kbytes/sec] received, 467.13 [Kbytes/sec] received, 472.89 [Kbytes/sec] received, 466.85 [Kbytes/sec] received 
+Concurrency Level:        100.0|100.0|100.0|100.0|100.0|
+Time taken for tests:     2.845|2.981|3.044|3.084|3.093|
+Complete requests:        5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:      1757.27|1677.23|1642.47|1621.51|1616.77|
+Time per request:         56.906|59.622|60.884|61.671|61.852|
+Time per request:         0.569|0.596|0.609|0.617|0.619|
+Transfer rate:            504.53|481.55|471.57|465.55|464.19|
+```
+**均值：**
+```
+Concurrency Level:        100.00
+Time taken for tests:     3.01 seconds
+Complete requests:        5000.00
+Requests per second:      1663.05 [#/sec] (mean)
+Time per request:         60.19 [ms] (mean)
+Time per request:         0.60 [ms] (mean, across all concurrent requests)
+Transfer rate:            477.48 [Kbytes/sec] received
+```
 
 
-均值：
-Concurrency Level:      100
-Time taken for tests:   2.618 seconds
-Complete requests:      5000
-Requests per second:    1909.82 [#/sec] (mean)
-Time per request:       52.361 [ms] (mean)
-Time per request:       0.524 [ms] (mean, across all concurrent requests)
-Transfer rate:          548.33 [Kbytes/sec] received
-```
+
+
+
+
+
+
 
 **ab -n 5000 -c 150 http://0.0.0.0:3001/  -- Sinatra + Unicorn**   
 ```
