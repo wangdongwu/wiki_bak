@@ -16,7 +16,27 @@ Time per request:       1386.643 \[ms] (mean)
 每个请求实际运行时间  
 Time per request:       5.547 \[ms] (mean, across all concurrent requests)   
 平均每秒网络流量  
-Transfer rate:          51.76 \[Kbytes/sec] received
+Transfer rate:          51.76 \[Kbytes/sec] received  
+
+**Apache ab 命令**  
+`ab -n 8000 -c 250 http://0.0.0.0:3001/`  
+表示同时处理8000个请求，250个并发。
+
+-
+
+**并发测试结果**  
+1. Sinatra + Unicorn  
+Sinatra配置：
+```ruby
+get '/' do
+  "hello world! it's #{Time.now} here!"
+end
+```
+Unicorn配置：
+```ruby
+worker_processes 5
+timeout 30
+```
 
  
 
