@@ -39,9 +39,6 @@ Time per request: xxx \[ms] (mean, across all concurrent requests)
 平均每秒网络流量    
 Transfer rate: xxx \[Kbytes/sec] received  
 
-**测试脚本**  
-
-[调试脚本]() 
 
 -
 
