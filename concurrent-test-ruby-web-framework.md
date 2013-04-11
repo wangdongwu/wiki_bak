@@ -4,9 +4,10 @@
 
 硬件：华硕K43SJ笔记本，i5 6核 2.50GHZ，4G内存  
 操作系统：Ubuntu 桌面版 12.04 LTS  
-Ruby版本：1.9.3，2.0.0  
-Ruby Web框架：Sinatra，Padrino，Goliath，Rails   
-HTTP server：Unicorn，Rainbows    
+Ruby版本：1.9.3  
+Python版本：2.7.3
+Ruby Web框架：Sinatra，Tornado，php   
+HTTP server：Unicorn，Rainbows，Apache    
 测试工具：Apache ab  
 
 -
@@ -246,4 +247,239 @@ Transfer rate:          259.22 [Kbytes/sec] received
 > **5000个请求， 600个并发，运行5次，脚本运行失败：**
 ```
 apr_poll: The timeout specified has expired (70007)
+```
+
+
+####3. Tornado
+
+> **5000个请求，50、100、150、300、500、550个并发，运行5次，结果如下：**
+```
+Concurrency Level:      50.0|50.0|50.0|50.0|50.0|
+Time taken for tests:   1.355|1.412|1.484|1.466|1.499|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    3691.34|3541.75|3368.83|3409.49|3336.14|
+Time per request:       13.545|14.117|14.842|14.665|14.987|
+Time per request:       0.271|0.282|0.297|0.293|0.3|
+Transfer rate:          857.95|823.18|782.99|792.44|775.39|
+
+Concurrency Level:      50.00
+Time taken for tests:   1.44 
+Complete requests:      5000.00
+Requests per second:    3469.51
+Time per request:       14.43
+Time per request:       0.29 
+Transfer rate:          806.39
+
+Concurrency Level:      100.0|100.0|100.0|100.0|100.0|
+Time taken for tests:   1.337|1.451|1.489|1.483|1.496|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    3740.24|3446.49|3358.79|3371.74|3342.1|
+Time per request:       26.736|29.015|29.773|29.658|29.921|
+Time per request:       0.267|0.29|0.298|0.297|0.299|
+Transfer rate:          869.31|801.04|780.66|783.67|776.78|
+
+Concurrency Level:      100.00
+Time taken for tests:   1.45
+Complete requests:      5000.00
+Requests per second:    3451.87
+Time per request:       29.02
+Time per request:       0.29
+Transfer rate:          802.29
+
+Concurrency Level:      150.0|150.0|150.0|150.0|150.0|
+Time taken for tests:   1.516|1.631|1.645|1.471|1.546|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    3297.52|3065.5|3039.68|3398.52|3233.7|
+Time per request:       45.489|48.932|49.347|44.137|46.387|
+Time per request:       0.303|0.326|0.329|0.294|0.309|
+Transfer rate:          766.42|712.49|706.49|789.89|751.58|
+
+Concurrency Level:      150.00
+Time taken for tests:   1.56
+Complete requests:      5000.00
+Requests per second:    3206.98
+Time per request:       46.86
+Time per request:       0.31
+Transfer rate:          745.37
+
+Concurrency Level:      300.0|300.0|300.0|300.0|300.0|
+Time taken for tests:   1.468|1.708|2.331|1.933|3.161|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    3405.52|2927.76|2145.29|2586.5|1581.65|
+Time per request:       88.092|102.468|139.841|115.987|189.675|
+Time per request:       0.294|0.342|0.466|0.387|0.632|
+Transfer rate:          791.52|680.47|498.61|601.16|367.61|
+
+Concurrency Level:      300.00
+Time taken for tests:   2.12
+Complete requests:      5000.00
+Requests per second:    2529.34
+Time per request:       127.21
+Time per request:       0.42
+Transfer rate:          587.87
+
+Concurrency Level:      500.0|500.0|500.0|500.0|500.0|
+Time taken for tests:   2.101|2.559|2.109|1.926|3.788|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    2380.35|1954.19|2370.69|2595.63|1319.99|
+Time per request:       210.053|255.861|210.909|192.632|378.79|
+Time per request:       0.42|0.512|0.422|0.385|0.758|
+Transfer rate:          553.24|454.2|551.0|603.28|306.79|
+
+Concurrency Level:      500.00
+Time taken for tests:   2.50
+Complete requests:      5000.00
+Requests per second:    2124.17
+Time per request:       249.65
+Time per request:       0.50
+Transfer rate:          493.70
+
+Concurrency Level:      550.0|550.0|550.0|550.0|550.0|
+Time taken for tests:   1.522|2.056|1.968|3.142|2.564|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    3285.57|2431.69|2540.84|1591.59|1950.08|
+Time per request:       167.399|226.18|216.464|345.566|282.039|
+Time per request:       0.304|0.411|0.394|0.628|0.513|
+Transfer rate:          763.64|565.18|590.55|369.92|453.24|
+
+Concurrency Level:      550.00
+Time taken for tests:   2.25
+Complete requests:      5000.00
+Requests per second:    2359.95
+Time per request:       247.53
+Time per request:       0.45
+Transfer rate:          548.51
+```
+
+> **5000个请求，800、900、1000个并发，运行5次，结果如下：**
+```
+Concurrency Level:      800.0|800.0|800.0|800.0|800.0|
+Time taken for tests:   2.113|3.364|2.587|3.08|3.638|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    2366.66|1486.4|1932.45|1623.63|1374.3|
+Time per request:       338.029|538.212|413.982|492.723|582.112|
+Time per request:       0.423|0.673|0.517|0.616|0.728|
+Transfer rate:          550.06|345.47|449.14|377.37|319.42|
+Concurrency Level:      800.00
+Time taken for tests:   2.96
+Complete requests:      5000.00
+Requests per second:    1756.69
+Time per request:       473.01
+Time per request:       0.59
+Transfer rate:          408.29
+
+Concurrency Level:      900.0|900.0|900.0|900.0|900.0|
+Time taken for tests:   1.585|2.566|2.58|2.119|2.552|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    3155.2|1948.63|1938.18|2359.36|1958.98|
+Time per request:       285.244|461.863|464.354|381.459|459.424|
+Time per request:       0.317|0.513|0.516|0.424|0.51|
+Transfer rate:          733.34|452.9|450.47|548.37|455.31|
+Concurrency Level:      900.00
+Time taken for tests:   2.28
+Complete requests:      5000.00
+Requests per second:    2272.07
+Time per request:       410.47
+Time per request:       0.46
+Transfer rate:          528.08
+
+Concurrency Level:      1000.0|1000.0|1000.0|1000.0|1000.0|
+Time taken for tests:   2.581|2.11|2.129|3.627|2.1|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    1936.92|2370.07|2348.35|1378.71|2381.04|
+Time per request:       516.284|421.928|425.832|725.314|419.985|
+Time per request:       0.516|0.422|0.426|0.725|0.42|
+Transfer rate:          450.18|550.86|545.81|320.44|553.4|
+Concurrency Level:      1000.00
+Time taken for tests:   2.51
+Complete requests:      5000.00
+Requests per second:    2083.02
+Time per request:       501.87
+Time per request:       0.50
+Transfer rate:          484.14
+```
+
+> **5000个请求， 1050个并发，运行5次，脚本运行失败：**
+```
+socket: Too many open files (24)
+```
+
+####4. PHP
+
+> **5000个请求，50、100、150、300、350个并发，运行5次，结果如下：**
+```
+Concurrency Level:      50.0|50.0|50.0|50.0|50.0|
+Time taken for tests:   0.549|0.606|0.619|0.63|0.66|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    9114.47|8256.4|8084.0|7935.74|7580.09|
+Time per request:       5.486|6.056|6.185|6.301|6.596|
+Time per request:       0.11|0.121|0.124|0.126|0.132|
+Transfer rate:          2287.52|2072.16|2028.89|1991.68|1902.42|
+Concurrency Level:      50.00
+Time taken for tests:   0.61
+Complete requests:      5000.00
+Requests per second:    8194.14
+Time per request:       6.12
+Time per request:       0.12
+Transfer rate:          2056.53
+
+Concurrency Level:      100.0|100.0|100.0|100.0|100.0|
+Time taken for tests:   0.646|0.659|0.653|0.633|0.638|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    7737.61|7585.41|7660.76|7904.88|7839.77|
+Time per request:       12.924|13.183|13.054|12.65|12.755|
+Time per request:       0.129|0.132|0.131|0.127|0.128|
+Transfer rate:          1941.96|1903.76|1922.67|1983.94|1967.6|
+Concurrency Level:      100.00
+Time taken for tests:   0.65
+Complete requests:      5000.00
+Requests per second:    7745.69
+Time per request:       12.91
+Time per request:       0.13
+Transfer rate:          1943.99
+
+Concurrency Level:      150.0|150.0|150.0|150.0|150.0|
+Time taken for tests:   0.8|0.853|2.511|2.659|2.221|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    6251.84|5861.69|1991.56|1880.44|2251.26|
+Time per request:       23.993|25.59|75.318|79.768|66.629|
+Time per request:       0.16|0.171|0.502|0.532|0.444|
+Transfer rate:          1569.06|1471.15|499.84|471.95|565.01|
+Concurrency Level:      150.00
+Time taken for tests:   1.81
+Complete requests:      5000.00
+Requests per second:    3647.36
+Time per request:       54.26
+Time per request:       0.36
+Transfer rate:          915.40
+
+Concurrency Level:      300.0|300.0|300.0|300.0|300.0|
+Time taken for tests:   4.18|11.32|5.064|5.721|3.835|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    1196.25|441.71|987.44|873.95|1303.63|
+Time per request:       250.783|679.179|303.817|343.27|230.127|
+Time per request:       0.836|2.264|1.013|1.144|0.767|
+Transfer rate:          300.23|110.86|247.82|219.34|327.18|
+Concurrency Level:      300.00
+Time taken for tests:   6.02
+Complete requests:      5000.00
+Requests per second:    960.60
+Time per request:       361.44
+Time per request:       1.20
+Transfer rate:          241.09
+
+Concurrency Level:      350.0|350.0|350.0|350.0|350.0|
+Time taken for tests:   14.589|12.35|4.043|7.7|12.821|
+Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
+Requests per second:    342.72|404.85|1236.85|649.32|389.98|
+Time per request:       1021.248|864.522|282.977|539.027|897.488|
+Time per request:       2.918|2.47|0.809|1.54|2.564|
+Transfer rate:          86.01|101.61|310.42|162.96|97.88|
+Concurrency Level:      350.00
+Time taken for tests:   10.30
+Complete requests:      5000.00
+Requests per second:    604.74
+Time per request:       721.05
+Time per request:       2.06
+Transfer rate:          151.78
 ```
