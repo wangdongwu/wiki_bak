@@ -13,5 +13,8 @@
 项目管理、实时监控、分析报告、数据银行。
 
 
-u p da r t
-
+```ruby
+def test(args)
+  puts args
+end
+``` 
