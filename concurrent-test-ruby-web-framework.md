@@ -1,4 +1,4 @@
-> **并发测试** 属于 **[压力测试]()** 的一项基本指标。  
+> **并发测试** 属于 **[压力测试](https://github.com/NaixSpirit/wiki/blob/master/web-stress-test.md)** 的一项基本指标。  
 
 ###测试环境  
 
@@ -57,7 +57,7 @@ timeout 30
 
 ####1. Sinatra
 
-详细测试结果请见：[Sinatra 并发测试结果]()
+详细测试结果请见：[Sinatra 并发测试结果](https://github.com/NaixSpirit/wiki/blob/master/testreport/sinatra-test.md)
 
 **最大值**  
 > **5000个请求，100个并发，运行5次，均值如下：**
@@ -86,7 +86,7 @@ Rainbows! do
 end
 ```
 
-详细测试结果请见：[Sinatra + Rainbows 并发测试结果]()
+详细测试结果请见：[Sinatra + Rainbows 并发测试结果](https://github.com/NaixSpirit/wiki/blob/master/testreport/sinatra-rainbows-test.md)
 
 **最大值**  
 > **5000个请求， 550个并发，运行5次，均值如下：**
@@ -108,7 +108,7 @@ apr_poll: The timeout specified has expired (70007)
 
 ####3. Tornado
 
-详细测试结果请见：[Tornado 并发测试结果]()
+详细测试结果请见：[Tornado 并发测试结果](https://github.com/NaixSpirit/wiki/blob/master/testreport/tornado-test.md)
 
 **最大值**  
 > **5000个请求， 1000个并发，运行5次，均值如下：**
@@ -129,7 +129,7 @@ socket: Too many open files (24)
 
 ####4. PHP
 
-详细测试结果请见：[PHP 并发测试结果]()
+详细测试结果请见：[PHP 并发测试结果](https://github.com/NaixSpirit/wiki/blob/master/testreport/php-test.md)
 
 **最大值**  
 > **5000个请求， 450个并发，运行5次，均值如下：**

@@ -16,7 +16,6 @@ Requests per second:    8194.14
 Time per request:       6.12
 Time per request:       0.12
 Transfer rate:          2056.53
-
 Concurrency Level:      100.0|100.0|100.0|100.0|100.0|
 Time taken for tests:   0.646|0.659|0.653|0.633|0.638|
 Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
@@ -31,7 +30,6 @@ Requests per second:    7745.69
 Time per request:       12.91
 Time per request:       0.13
 Transfer rate:          1943.99
-
 Concurrency Level:      150.0|150.0|150.0|150.0|150.0|
 Time taken for tests:   0.8|0.853|2.511|2.659|2.221|
 Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
@@ -46,7 +44,6 @@ Requests per second:    3647.36
 Time per request:       54.26
 Time per request:       0.36
 Transfer rate:          915.40
-
 Concurrency Level:      300.0|300.0|300.0|300.0|300.0|
 Time taken for tests:   4.18|11.32|5.064|5.721|3.835|
 Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
@@ -61,7 +58,6 @@ Requests per second:    960.60
 Time per request:       361.44
 Time per request:       1.20
 Transfer rate:          241.09
-
 Concurrency Level:      350.0|350.0|350.0|350.0|350.0|
 Time taken for tests:   14.589|12.35|4.043|7.7|12.821|
 Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
@@ -76,7 +72,6 @@ Requests per second:    604.74
 Time per request:       721.05
 Time per request:       2.06
 Transfer rate:          151.78
-
 Concurrency Level:      400.0|400.0|400.0|400.0|400.0|
 Time taken for tests:   5.717|17.431|26.971|4.318|13.813|
 Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
@@ -91,7 +86,6 @@ Requests per second:    573.38
 Time per request:       1091.98
 Time per request        2.73
 Transfer rate:          143.73
-
 Concurrency Level:      450.0|450.0|450.0|450.0|450.0|
 Time taken for tests:   7.788|16.969|16.525|13.522|3.189|
 Complete requests:      5000.0|5000.0|5000.0|5000.0|5000.0|
