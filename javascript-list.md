@@ -13,6 +13,8 @@
 [[Underscore用法|underscore-ing]]  
 [[with语句|with-in-js]]   
 [[参数|arguments-in-js]]  
+[[数据类型|data-type-in-js]]  
+
 
 
 
