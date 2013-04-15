@@ -13,8 +13,6 @@
 [[Underscore用法|underscore-ing]]  
 [[with语句|with-in-js]]   
 [[参数|arguments-in-js]]  
-[[变量、作用域和内存|variable-scope-memory-in-js]]   
-
 
 
 
