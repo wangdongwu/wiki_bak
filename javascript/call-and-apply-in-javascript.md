@@ -8,7 +8,8 @@ function factorial(num) {
   }
 };
 
-// 定义阶乘函数一般都要用到递归算法，但问题是这个函数的执行与函数名 factorial 紧紧耦合在了一起。为了消除这种紧密耦合的现象，可以使用arguments.callee
+// 定义阶乘函数一般都要用到递归算法，但问题是这个函数的执行与函数名 factorial 紧紧耦合在了一起。
+//为了消除这种紧密耦合的现象，可以使用arguments.callee
 function factorial(num) {
   if (num <= 1) {
     return 1;
@@ -23,6 +24,22 @@ function factorial(num) {
 每个函数都包含两个非继承而来的方法：apply() 和 call()。这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内 this 对象的值。
 
 apply() 方法接收两个参数：一个是在其中运行函数的作用域，另一个是参数数组。其中，第二个参数可以是 Array 的实例，也可以是 arguments 对象。
+```js
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+function callsum1(num1, num2) {
+  return sum.apply(this, arguments);
+}
+
+function callsum2(num1, num2) {
+  return sum.apply(this, [num1, num2]);
+}
+
+alert(callsum1(10, 10));  //20
+alert(callsum2(10, 10));  //20
+```
 
 ### call方法 
 **Synatx**
