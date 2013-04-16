@@ -1,6 +1,6 @@
 > [[JS Koans 学习记录|/javascript/js-koans ]]  
 [[null 和 undeined|/javascript/null and undefined]]  
-[[函数对象|/javascript/method-object]]  
+[[函数对象|method-object]]  
 [[变量空间|/javascript/variable-space]]  
 [[原型&继承机制|/javascript/prototype]]  
 [[深入理解原型|/javascript/deep-in-prototype]]  
