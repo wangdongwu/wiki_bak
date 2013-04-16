@@ -1,6 +1,6 @@
 > [[JS Koans 学习记录|/javascript/js-koans ]]  
 [[null 和 undeined|/javascript/null and undefined]]  
-[[函数对象|/javascript/method-object]]  
+[[函数对象|method-object]]  
 [[变量空间|/javascript/variable-space]]  
 [[原型&继承机制|/javascript/prototype]]  
 [[深入理解原型|/javascript/deep-in-prototype]]  
@@ -13,7 +13,7 @@
 [[JavaScript中的作用域|/javascript/scope-in-javascript]]  
 [[Underscore用法|/javascript/underscore-ing]]  
 [[with语句|/javascript/with-in-js]]   
-[[参数|/javascript/arguments-in-js]]  
+[[参数|arguments-in-js]]  
 [[sort方法|/javascript/sort-in-js]]  
 
 
