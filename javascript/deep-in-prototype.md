@@ -59,4 +59,19 @@ Person.prototype.sayHi = function() {
 };
 friend.sayHi(); //"hi"
 ```
-但如果是重写整个原型对象，情况就不一样了。调用构造函数时会为实例添加一个指向最初原型的[[Prototype]]指针
+但如果是重写整个原型对象，情况就不一样了。调用构造函数时会为实例添加一个指向最初原型的 Prototype 指针，而把原型修改为另外一个对象就等于切断了构造函数与最初原型之间的联系。   
+**实例中的指针仅指向原型，而不指向构造函数。**
+```js
+function Person() {
+}
+var friend = new Person();
+Person.prototype = {
+  constructor: Person,
+  name: "Spirit",
+  age: 24,
+  sayName: function() {
+    alert(this.name);
+  }
+};
+friend.sayName(); //error
+```
