@@ -48,3 +48,15 @@ Person.prototype = {
   }
 };
 ```
+
+####原型的动态性
+
+由于原型查找值的过程是一次搜索，因此对原型对象所做的任何修改都能够立即从实例上反映出来——即使是先创造了实例后修改原型也照样如此。
+```js
+var friend = new Person();
+Person.prototype.sayHi = function() {
+  alert("hi");
+};
+friend.sayHi(); //"hi"
+```
+但如果是重写整个原型对象，情况就不一样了。调用构造函数时会为实例添加一个指向最初原型的[[Prototype]]指针
