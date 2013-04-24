@@ -4,6 +4,8 @@
 
 **[[Sinatra|sinatra-list]]**  
 
+**[[Rack|rack-list]]**  
+
 **[[JavaScript|javascript-list]]**
 
 **[[Gems|gems-list]]**
