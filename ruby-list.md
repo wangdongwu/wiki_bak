@@ -9,3 +9,4 @@
 [[Enumerable模块|enmuerable]]  
 [[Blocks, Procs and Lambdas|blocks-procs-and-lambdas]]   
 [[Ruby Koans学习记录|ruby-koans]]  
+[[Symbols Meet Procs|symbols-with-procs]]  
