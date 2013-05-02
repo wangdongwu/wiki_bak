@@ -75,8 +75,8 @@ end
 
 ####行数超过一屏的大方法
 
-行数超过一屏的大方法真的很丑...而且比较难懂...
-modles/answer.rb 中的 add 方法
-modles/prelogic.rb 中的 get_visible_questions 方法
+行数超过一屏的大方法真的很丑...而且比较难懂...    
+modles/answer.rb 中的 add 方法    
+modles/prelogic.rb 中的 get_visible_questions 方法   
 
 
