@@ -59,7 +59,10 @@ attributes.each do |key, value|
 end
 hash
 
-# 可以修改为下面这样，我没有改这个函数，上面的可能更加直观，但是却多了hash临时变量，我还没有去确认临时变量的引用对Ruby的GC机制会不会造成性能影响，不过发现有大量的临时变量肯定是要进行修改的
+# 可以修改为下面这样，我没有改这个函数。
+# 上面的可能更加直观，但是却多了hash临时变量。
+# 我还没有去确认临时变量的引用对Ruby的GC机制会不会造成性能影响
+# 不过发现有大量的临时变量肯定是要进行修改的
 attributes.inject({}) do |memo, values|
   field = fields[values.first]
   accessors = field.options[:accessor] if field
