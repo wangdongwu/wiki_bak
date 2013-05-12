@@ -4,5 +4,5 @@
 [[第四周|/weekly_report/weekly_report_20130414]]    
 [[第五周|/weekly_report/weekly_report_20130421]]    
 [[第六周|/weekly_report/weekly_report_20130428]]    
-[[第七周|/weekly_report/weekly_report_20130505]]    
-[[第八周|/weekly_report/weekly_report_20130512]]    
+[[第七-八周|/weekly_report/weekly_report_20130512]]    
+  
