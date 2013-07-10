@@ -1,5 +1,3 @@
-> **并发测试** 属于 **[压力测试](https://github.com/NaixSpirit/wiki/blob/master/web-stress-test.md)** 的一项基本指标。  
-
 ###测试环境  
 
 硬件：华硕K43SJ笔记本，i5 6核 2.50GHZ，4G内存  
