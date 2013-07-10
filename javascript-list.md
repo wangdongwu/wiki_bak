@@ -1,5 +1,4 @@
-> [[JS Koans 学习记录|/javascript/js-koans ]]  
-[[null 和 undeined|/javascript/null and undefined]]  
+> [[null 和 undeined|/javascript/null and undefined]]  
 [[变量空间|/javascript/variable-space]]  
 [[原型&继承机制|/javascript/prototype]]  
 [[深入理解原型|/javascript/deep-in-prototype]]  
